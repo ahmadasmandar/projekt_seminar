@@ -7,8 +7,8 @@ classdef UILegoCity < handle
 
     % private properties
     properties (Access = private)
-        Component1 UICameras
-        Component2 UIControls
+        UICameras_Obj  UICameras
+        UIControls_Obj UIControls
     end
 
     % public methods
@@ -53,14 +53,14 @@ classdef UILegoCity < handle
             obj.Container.RowHeight = {'1x'};
             obj.Container.ColumnWidth = {'2x', '0.5x'};
                          % the first GUI component
-            obj.Component1 = UICameras(obj.UI, obj.Container, 1);
-            obj.Component1.Container.Padding = 0;
+            obj.UICameras_Obj = UICameras(obj.UI, obj.Container, 1);
+            obj.UICameras_Obj.Container.Padding = 0;
 
 
-
-            % the second GUI component
-            obj.Component2 =UIControls(obj.UI, obj.Container, obj.Component1);
-            obj.Component2.Container.Padding = 0;
+            % ***************************
+            % the second GUI component and send the Cameras_Object 
+            obj.UIControls_Obj =UIControls(obj.UI, obj.Container, obj.UICameras_Obj);
+            obj.UIControls_Obj.Container.Padding = 0;
             get(0,'ScreenSize')
             
 

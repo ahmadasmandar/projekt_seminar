@@ -2,16 +2,17 @@ classdef UICameras < matlab.apps.AppBase
     % public properties
     properties (Access = public)
         UI         matlab.ui.Figure
-        Container  matlab.ui.container.GridLayout   
+        Container  matlab.ui.container.GridLayout
+        % * Objct to send data to other apps   
         connect       
     end
 
     % private properties
     properties (Access = public)
-        Component1  UIQRCode
-        Component2  UILaser
-        Component3  UIMultiSpectral
-        Component4  UIInfraRed
+        QRCode  UIQRCode
+        Laser  UILaser
+        MultiSpectral  UIMultiSpectral
+        InfraRed  UIInfraRed
         
         
     end
@@ -30,33 +31,35 @@ classdef UICameras < matlab.apps.AppBase
             obj.Container.ColumnWidth = {'1x', '1x','0x'};
 
             % the first GUI component
-            obj.Component1 = UIQRCode(obj.UI, obj.Container);
-            obj.Component1.Container.Layout.Row = 1;
-            obj.Component1.Container.Layout.Column = 1;
+            obj.QRCode = UIQRCode(obj.UI, obj.Container);
+            obj.QRCode.Container.Layout.Row = 1;
+            obj.QRCode.Container.Layout.Column = 1;
 
 
             % the second GUI component
-            obj.Component2 = UILaser(obj.UI, obj.Container);
-            obj.Component2.Container.Layout.Row = 1;
-            obj.Component2.Container.Layout.Column = 2;
+            obj.Laser = UILaser(obj.UI, obj.Container);
+            obj.Laser.Container.Layout.Row = 1;
+            obj.Laser.Container.Layout.Column = 2;
 
             
             % the third GUI component
-            obj.Component3 = UIMultiSpectral(obj.UI, obj.Container);
-            obj.Component3.Container.Layout.Row = 2;
-            obj.Component3.Container.Layout.Column = 1;
+            obj.MultiSpectral = UIMultiSpectral(obj.UI, obj.Container);
+            obj.MultiSpectral.Container.Layout.Row = 2;
+            obj.MultiSpectral.Container.Layout.Column = 1;
 
 
 
             % the fourth GUI component
-            obj.Component4 = UIInfraRed(obj.UI, obj.Container);
-            obj.Component4.Container.Layout.Row = 2;
-            obj.Component4.Container.Layout.Column = 2;
+            obj.InfraRed = UIInfraRed(obj.UI, obj.Container);
+            obj.InfraRed.Container.Layout.Row = 2;
+            obj.InfraRed.Container.Layout.Column = 2;
+
+
             % send the objects to the Initialize
-            obj.connect=UIControls(obj.UI,obj.Container,obj);
-            obj.connect.Container.Layout.Row = 3;
-            obj.connect.Container.Layout.Column = 3;
-            % obj.connect.Visible='off';
+            % obj.connect=UIControls(obj.UI,obj.Container,obj);
+            % obj.connect.Container.Layout.Row = 3;
+            % obj.connect.Container.Layout.Column = 3;
+            % % obj.connect.Visible='off';
             
 
 

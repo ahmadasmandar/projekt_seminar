@@ -4,17 +4,25 @@ classdef UIInitialize < matlab.apps.AppBase
         UI         matlab.ui.Figure
         Container  matlab.ui.container.GridLayout
         serial
+        % *************
+
         battery
         train
         leds
         halo
+        cameras_app
+        % *********
+
         demo_app
         demo
+
+        % *********
+    
         webcam_obj              
         infrared_obj
         multispectral_obj
         laser_obj
-        cameras_app
+
     end
     
     % private properties
@@ -22,7 +30,6 @@ classdef UIInitialize < matlab.apps.AppBase
         
         connect_serial_port     matlab.ui.control.Button
         camera_init             matlab.ui.control.Button
- 
         param
         webcam
         infrared
@@ -53,61 +60,57 @@ classdef UIInitialize < matlab.apps.AppBase
         function app = UIInitialize(varargin)
         % set the superior window (uifigure)
             disp('constructor created')
-            if nargin>5
-                disp('first constructor created')
-                % app.UI = UI;
-                app.UI = varargin{1};
-                app.demo=false;
-                app.param=parameter();
-                % create the main layout with the given element as parent
-                app.Container = uigridlayout(varargin{2});
+            disp('first constructor created')
+            % app.UI = UI;
+            app.UI = varargin{1};
 
-                % make a grid layour with 7 rows and 4 columns
-                app.Container.RowHeight = {40, 40};
-                app.Container.ColumnWidth = {'1x'};
-                % button to com_port
-                app.connect_serial_port = uibutton(app.Container);
-                app.connect_serial_port.Text = "COM-Port verbinden";
-                app.connect_serial_port.FontSize = 16;
-                app.connect_serial_port.Layout.Row = 1;
-                app.connect_serial_port.Layout.Column = 1;
-                app.connect_serial_port.ButtonPushedFcn =createCallbackFcn(app,@connect_serial_port_Callback,true);
+            app.demo=false;
 
-                % button to initilize the cameras
-                app.camera_init = uibutton(app.Container);
-                app.camera_init.Text = "Kameras initialisieren";
-                app.camera_init.FontSize = 16;
-                app.camera_init.Layout.Row = 2;
-                app.camera_init.Layout.Column = 1;
-                app.camera_init.ButtonPushedFcn = createCallbackFcn(app, @camera_init_Callback, true);
-                
-                app.Container.Padding = [10 10 10 10];
+            app.param=parameter();
+            % create the main layout with the given element as parent
+            app.Container = uigridlayout(varargin{2});
 
-                app.battery=varargin{3};
-                app.train=varargin{4};
-                app.leds=varargin{5};
-                app.halo=varargin{6};
-                app.demo_app=varargin{7};
-                app.cameras_app=varargin{8};
-                app.webcam_obj=app.cameras_app.Component1;
-                app.laser_obj=app.cameras_app.Component2;
-                app.multispectral_obj=app.cameras_app.Component3;
-                app.infrared_obj=app.cameras_app.Component4;
-                % disp(varargin)
-                app.UI.CloseRequestFcn = createCallbackFcn(app, @MainAppCloseRequest, true);
-                
+            % make a grid layour with 7 rows and 4 columns
+            app.Container.RowHeight = {40, 40};
+            app.Container.ColumnWidth = {'1x'};
+            % button to com_port
+            app.connect_serial_port = uibutton(app.Container);
+            app.connect_serial_port.Text = "COM-Port verbinden";
+            app.connect_serial_port.FontSize = 16;
+            app.connect_serial_port.Layout.Row = 1;
+            app.connect_serial_port.Layout.Column = 1;
+            app.connect_serial_port.ButtonPushedFcn =createCallbackFcn(app,@connect_serial_port_Callback,true);
+
+            % button to initilize the cameras
+            app.camera_init = uibutton(app.Container);
+            app.camera_init.Text = "Kameras initialisieren";
+            app.camera_init.FontSize = 16;
+            app.camera_init.Layout.Row = 2;
+            app.camera_init.Layout.Column = 1;
+            app.camera_init.ButtonPushedFcn = createCallbackFcn(app, @camera_init_Callback, true);
             
-            elseif nargin<5 && nargin>0
+            app.Container.Padding = [10 10 10 10];
+            % ************************
+            % Receive the Objects from UIControls line 70
+            app.battery=    varargin{3}.UIBattery_Obj;
+            app.train=      varargin{3}.UIRailway_Obj;
+            app.leds=       varargin{3}.UILeds_Obj;
+            app.halo=       varargin{3}.UIHalogenLamp_Obj;
+            app.demo_app=   varargin{3}.UIDemoMode_Obj;
+            app.cameras_app=varargin{3}.Cameras_Obj;
 
-                disp('second constructor created')
-                % the Names refer to the ordet not to the function of name
-                app.webcam_obj=varargin{1};
-                app.laser_obj=varargin{2};
-                app.multispectral_obj=varargin{3};
-                app.infrared_obj=varargin{4};
-                % disp(varargin)
+            % *****************************
+            % Init the Cameras objects 4 Cameras 
 
-            end
+            app.webcam_obj=app.cameras_app.QRCode;
+            app.laser_obj=app.cameras_app.Laser;
+            app.multispectral_obj=app.cameras_app.MultiSpectral;
+            app.infrared_obj=app.cameras_app.InfraRed;
+
+
+            % disp(varargin)
+            app.UI.CloseRequestFcn = createCallbackFcn(app, @MainAppCloseRequest, true);
+            
 
         end
 

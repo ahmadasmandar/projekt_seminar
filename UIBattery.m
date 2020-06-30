@@ -26,9 +26,6 @@ classdef UIBattery < handle
             obj.Container.RowHeight = {'1x'};
             obj.Container.ColumnWidth = {'1x'};
             
-        
-
-
             % Create battery_label
             obj.battery_label = uilabel(obj.Container);
             obj.battery_label.HorizontalAlignment = 'left';
