@@ -1,4 +1,4 @@
-classdef app1 < matlab.apps.AppBase
+classdef buttonsgroup_test < matlab.apps.AppBase
 
     % Properties that correspond to app components
     properties (Access = public)
