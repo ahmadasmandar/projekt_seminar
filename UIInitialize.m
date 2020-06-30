@@ -163,6 +163,20 @@ classdef UIInitialize < matlab.apps.AppBase
                     % send the Whole app to demo_app
                     receive_objects_from_init(app.demo_app, app)
 
+                    % *************************
+                    % send the app to the Cameras
+                    % just to copy
+                    % app.webcam_obj=app.cameras_app.QRCode;
+                    % app.laser_obj=app.cameras_app.Laser;
+                    % app.multispectral_obj=app.cameras_app.MultiSpectral;
+                    % app.infrared_obj=app.cameras_app.InfraRed;
+
+                    receive_init_from_UIInitialize(app.webcam_obj, app);
+                    % receive_init_from_UIInitialize(app.webcam_obj, app);
+                    % receive_init_from_UIInitialize(app.webcam_obj, app);
+                    % receive_init_from_UIInitialize(app.webcam_obj, app);
+
+
                 else
                     % warn that connecting failed
                     waitfor(msgbox('Verbindung konnte nicht hergestellt werden.', 'Fehler', 'warn'));
@@ -342,7 +356,7 @@ classdef UIInitialize < matlab.apps.AppBase
 
 
         end
-        
+
         % the Enables ...
 
         function app = enable_webcam(app, value)
