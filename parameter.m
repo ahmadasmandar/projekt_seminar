@@ -34,7 +34,7 @@ function camera = camera_webcam
     % set camera identifiers
     name = 'QR-Code webcam';
     model = 'Logitech HD Webcam C615';
-    format = 'RGB24_640x480';
+    format = 'YUY2_640x480';
 
     % initialize camera
     camera = class_videoinput(name, 'winvideo', format, 'rgb', model);
