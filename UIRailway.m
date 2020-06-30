@@ -97,7 +97,7 @@ classdef UIRailway < matlab.apps.AppBase
 
         end
 
-        function train_speed_Callback(app, event)
+        function train_speed_Callback(app, ~)
             % hObject    handle to train_speed (see GCBO)
             % eventdata  reserved - to be defined in a future version of MATLAB
             % handles    structure with handles and user data (see GUIDATA)

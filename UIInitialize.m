@@ -11,13 +11,17 @@ classdef UIInitialize < matlab.apps.AppBase
         leds
         halo
         cameras_app
+
         % *********
+        % demo app object
 
         demo_app
+        % *****
+        % the demo flag
         demo
 
         % *********
-    
+        % the cameras objects from UICameras. 
         webcam_obj              
         infrared_obj
         multispectral_obj
@@ -30,7 +34,10 @@ classdef UIInitialize < matlab.apps.AppBase
         
         connect_serial_port     matlab.ui.control.Button
         camera_init             matlab.ui.control.Button
+        % object to access the paramerter.m 
         param
+         % *********
+        % the cameras objects from param class >>  videoinput classs
         webcam
         infrared
         multispectral
@@ -56,14 +63,13 @@ classdef UIInitialize < matlab.apps.AppBase
     methods (Access = public)
         % the class contructor has the same name as the class
         %  Controls Construcotr
-        % function app = UIInitialize(UI, parent,battery,train_par,leds,halo,demo_par)
+
         function app = UIInitialize(varargin)
         % set the superior window (uifigure)
             disp('constructor created')
-            disp('first constructor created')
-            % app.UI = UI;
             app.UI = varargin{1};
-
+            
+            % the demo flag is set to false 
             app.demo=false;
 
             app.param=parameter();
@@ -107,11 +113,9 @@ classdef UIInitialize < matlab.apps.AppBase
             app.multispectral_obj=app.cameras_app.MultiSpectral;
             app.infrared_obj=app.cameras_app.InfraRed;
 
-
             % disp(varargin)
             app.UI.CloseRequestFcn = createCallbackFcn(app, @MainAppCloseRequest, true);
             
-
         end
 
 
@@ -121,9 +125,7 @@ classdef UIInitialize < matlab.apps.AppBase
 
     methods(Access = public)
         
-        function connect_serial_port_Callback(app,event)
-
-                % app.cameras_app.Component1.LiveView.Enable='on';
+        function connect_serial_port_Callback(app,~)
 
                 app.connect_serial_port.Enable = 'off';
                 fclose all ;
@@ -340,6 +342,8 @@ classdef UIInitialize < matlab.apps.AppBase
 
 
         end
+        
+        % the Enables ...
 
         function app = enable_webcam(app, value)
             if ~is_webcam(app) || app.demo

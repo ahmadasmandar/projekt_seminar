@@ -36,8 +36,8 @@ classdef class_serial_port < handle
                     error('Unknown COM-PORT terminator string %s', terminator);
             end
 
-            %filename = datestr(now,'yymmdd_HHMMSS');
-            % obj.battery_log = fopen(sprintf('battery_log_%s.log', filename),'w');
+            filename = datestr(now,'yymmdd_HHMMSS');
+            obj.battery_log = fopen(sprintf('battery_log_%s.log', filename),'w');
         end
 
         function success = connect(obj)
@@ -80,9 +80,9 @@ classdef class_serial_port < handle
                 obj.setHalogen(0);
                 obj.setTrainSpeed(0);
                 
-                % if obj.battery_log ~= -1
-                    % fclose(obj.battery_log);
-                % end
+                if obj.battery_log ~= -1
+                    fclose(obj.battery_log);
+                end
 
                 fclose(obj.handle);
                 delete(obj.handle);
@@ -193,9 +193,9 @@ classdef class_serial_port < handle
 
                     if strncmp(line, 'BAT:', 4)
                         % log battery state
-                        % if obj.battery_log ~= -1
-                            % fprintf(obj.battery_log, '%s %s\r\n', datestr(now,'yymmdd_HHMMSS'), line(5:end));
-                        % end
+                        if obj.battery_log ~= -1
+                            fprintf(obj.battery_log, '%s %s\r\n', datestr(now,'yymmdd_HHMMSS'), line(5:end));
+                        end
 
                         % show battery state
                         obj.call_callback('bat', line(5:end));

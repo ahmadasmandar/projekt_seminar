@@ -37,15 +37,15 @@ function demomode_Callback(app,event)
             app.init_app.train.train_speed.Value = 9;
             app.init_app.train.train_dir_left.Value = 1;
         end
-        train_speed_Callback(app.init_app.train.train_speed, app);
+        train_speed_Callback(app.init_app.train, app);
         enable_serial(app.init_app, 'off');
     
         try
             if app.demomode.Value==0
                 disp('demomode value is 0');
-                app.init_app.serial.serial.setDemoMode(0);
-                stop_infrared_Callback(handles.snapshot_infrared, app);
-                % handles = guidata(hObject);
+                app.init_app.serial.setDemoMode(0);
+                % we need to config from infrared function 
+                stop_infrared_Callback(app.snapshot_infrared, app);
     
                 app.init_app.demo = false;
     
@@ -56,7 +56,7 @@ function demomode_Callback(app,event)
             else
                 app.init_app.serial.setDemoMode(1);
                 disp('demomode value is 1');
-                % live_infrared_Callback(handles.snapshot_infrared, [], handles);
+                live_infrared_Callback(handles.snapshot_infrared, [], handles);
                 app = enable_webcam(app, 'off');
                 app = enable_laser(app, 'off');
                 app = enable_infrared(app, 'off');
