@@ -30,7 +30,7 @@ classdef UIInitialize < matlab.apps.AppBase
     end
     
     % private properties
-    properties (Access = private)
+    properties (Access = public)
         
         connect_serial_port     matlab.ui.control.Button
         camera_init             matlab.ui.control.Button
@@ -190,6 +190,8 @@ classdef UIInitialize < matlab.apps.AppBase
 
         function enabled = is_webcam(app)
             enabled = isfield(app, 'webcam') && isa(app.webcam, 'class_videoinput');
+            disp('check is webcame and result');
+            disp(enabled);
         end
         
         function enabled = is_laser(app)
@@ -292,7 +294,7 @@ classdef UIInitialize < matlab.apps.AppBase
             
         end
 
-        function camera_init_Callback(app,event)
+        function camera_init_Callback(app,~)
 
             app.camera_init.Enable='off';
 
@@ -310,9 +312,12 @@ classdef UIInitialize < matlab.apps.AppBase
             if ~is_webcam(app)
                 try
                     app.webcam = app.param.camera_webcam();
+                    disp(app.webcam)
                     enable_webcam(app, 'on');
+                    disp('success to activate the cameras')
                 catch e
                     all_success = false;
+                    disp('failed to activate the cameras')
                     warning('Exception in camera_webcam(): %s', getReport(e));
                 end
             end
@@ -347,13 +352,13 @@ classdef UIInitialize < matlab.apps.AppBase
                 end
             end
 
-            % Set preview data to native camera bit depth (default is 8 bit)
+            Set preview data to native camera bit depth (default is 8 bit)
             imaqmex('feature', '-previewFullBitDepth', true);
 
             if all_success == false
                 app.camera_init.Enable = 'on';
             end
-
+            
 
         end
 
@@ -361,8 +366,11 @@ classdef UIInitialize < matlab.apps.AppBase
 
         function app = enable_webcam(app, value)
             if ~is_webcam(app) || app.demo
+                disp('is not webcame');
+                disp(app.demo);
                 return;
             end
+            disp('is webcame');
         
             app.webcam_obj.LiveView.Enable=value;
             app.webcam_obj.StopView.Enable=value;

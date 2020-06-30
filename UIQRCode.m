@@ -11,7 +11,7 @@ classdef UIQRCode < matlab.apps.AppBase
     end
 
     % private properties
-    properties (Access = private)
+    properties (Access = public)
         Headline                matlab.ui.control.Label
         camview_webcam          matlab.ui.control.UIAxes
         TextLabel               matlab.ui.control.Label
