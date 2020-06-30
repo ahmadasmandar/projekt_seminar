@@ -1,0 +1,211 @@
+classdef UIInitialize < matlab.apps.AppBase
+    % public properties
+    properties (Access = public)
+        UI         matlab.ui.Figure
+        Container  matlab.ui.container.GridLayout   
+    end
+
+    % private properties
+    properties (Access = private)
+        
+        connect_serial_port     matlab.ui.control.Button
+        camera_init             matlab.ui.control.Button
+        Serial_app              % appect to handel serial communications > from class parameter with serial properties
+        Param_app               % appect from class Parameter to allow its functions
+        Battery         % Battery app 
+        Train           % Train app
+        Leds            % Leds app
+        HalogenLampe    % Halogen app
+        DemoMode        % DemoMode app 
+        
+    end
+
+    % public methods
+    methods (Access = public)
+        % the class contructor has the same name as the class
+        function app = UIInitialize(UI, parent,battery,train_par,leds,halo,demo_par)
+            % set the superior window (uifigure)
+
+
+            app.UI = UI;
+            app.Param_app=parameter();
+            % create the main layout with the given element as parent
+            app.Container = uigridlayout(parent);
+
+            % make a grid layour with 7 rows and 4 columns
+            app.Container.RowHeight = {40, 40};
+            app.Container.ColumnWidth = {'1x'};
+            app.UI.CloseRequestFcn = createCallbackFcn(app, @MainAppCloseRequest, true);
+            
+        
+
+
+            % button to com_port
+            app.connect_serial_port = uibutton(app.Container);
+            app.connect_serial_port.Text = "COM-Port verbinden";
+            app.connect_serial_port.FontSize = 16;
+            app.connect_serial_port.Layout.Row = 1;
+            app.connect_serial_port.Layout.Column = 1;
+            app.connect_serial_port.ButtonPushedFcn = createCallbackFcn(app,@connect_serial_port_Callback, true);
+            
+           
+
+
+            % button to initilize the cameras
+            app.camera_init = uibutton(app.Container);
+            app.camera_init.Text = "Kameras initialisieren";
+            app.camera_init.FontSize = 16;
+            app.camera_init.Layout.Row = 2;
+            app.camera_init.Layout.Column = 1;
+            app.camera_init.ButtonPushedFcn = createCallbackFcn(app, @enable_buttons, true);
+            
+            app.Container.Padding = [10 10 10 10];
+
+
+            app.Battery=battery;
+            app.Train=train_par;
+            app.Leds=leds;
+            app.HalogenLampe=halo;
+            app.DemoMode=demo_par;
+
+        end
+    end
+
+
+
+    methods(Access = public)
+        
+        function connect_serial_port_Callback(app,event)
+
+                app.connect_serial_port.Enable = 'off';
+            
+                % Initialize serial port
+                if is_serial_port(app) == false
+                    try
+                        app.Serial_app = app.Param_app.serial_port({@serial_callback, app});
+                    catch e
+                        warning('Exception in camera_webcam(): %s', getReport(e));
+                    end
+                end
+            
+                % connect
+                success = false;
+                try
+                    success = app.Serial_app.connect();
+                catch e
+                    warning('Exception in serial.connect: %s', getReport(e));
+                end
+            
+                if success == true
+                    enable_serial(app, 'on');
+                else
+                    % warn that connecting failed
+                    waitfor(msgbox('Verbindung konnte nicht hergestellt werden.', 'Fehler', 'warn'));
+                    app.connect_serial_port.Enable = 'on';
+                end
+            
+                % Update app structure
+            end
+
+        function enabled = is_serial_port(app)
+            enabled = isfield(app, 'serial') && isa(app.Serial_app, 'class_serial_port');
+        end
+
+        function serial_callback(app, type, parameter)
+            
+                switch(type)
+                    % case 'prelap1'
+                    %     if app.demo
+                    %         if is_laser(app)
+                    %             capture_start_Callback(app.capture_start, [], app);
+                    %             app = guidata(happect);
+            
+                    %             pause(12);
+            
+                    %             capture_stop_Callback(app.capture_stop, [], app);
+                    %             app = guidata(happect);
+            
+                    %             capture_calc_Callback(app.capture_calc, [], app);
+                    %             app = guidata(happect);
+                    %         end
+                    %     end
+                    % case 'lap1'
+                    % case 'prelap0'
+                    % case 'lap0'
+                    %     if app.demo
+                    %         % Camera often crashes Matlab
+                    %         if is_multispectral(app) && app.haloA.Value ~= 1
+                    %             snapshot_multispectral_Callback(app.snapshot_multispectral, [], app);
+                    %             app = guidata(happect);
+                    %         end
+            
+                    %         if is_webcam(app) && app.ledA.Value ~= 1
+                    %             snapshot_webcam_Callback(app.snapshot_webcam, [], app);
+                    %             app = guidata(happect);
+            
+                    %             qr_button_Callback(app.qr_button, [], app);
+                    %             app = guidata(happect);
+                    %         end
+                    %     end
+                    % case 'halo'
+                    %     if app.demo
+                    %         % Camera often crashes Matlab
+                    %         if is_multispectral(app)
+                    %             pause(0.2);
+                    %             snapshot_multispectral_Callback(app.snapshot_multispectral, [], app);
+                    %             app = guidata(happect);
+                    %         end
+                    %     end
+                    % case 'led'
+                    %     if app.demo
+                    %         if is_webcam(app)
+                    %             snapshot_webcam_Callback(app.snapshot_webcam, [], app);
+                    %             app = guidata(happect);
+            
+                    %             qr_button_Callback(app.qr_button, [], app);
+                    %             app = guidata(happect);
+                    %         end
+                    %     end
+                    case 'bat'
+                        app.battery_label.String = sprintf('Akku: %s', parameter);
+                    otherwise
+                        error('Unknown SerialPort Callback "%s".', type);
+                end
+            
+                % Update app structure
+        end
+
+        function enable_serial(app, value)
+            % if ~app.demo
+                app.Train.train_dir_left.Enable = value;
+                app.Train.train_dir_right.Enable = value;
+                app.Train.train_speed.Enable = value;
+        
+                app.Leds.led0.Enable = value;
+                app.Leds.led1.Enable = value;
+                app.Leds.led2.Enable = value;
+                app.Leds.led3.Enable = value;
+                app.Leds.ledA.Enable = value;
+        
+                app.HalogenLampe.halo0.Enable = value;
+                app.HalogenLampe.halo1.Enable = value;
+                app.HalogenLampe.haloA.Enable = value;
+            % end
+        
+                 app.DemoMode.demomode.Enable = value;
+            
+        end
+
+        function enable_buttons(app)
+
+            % app.battery.Enable='on';
+            % app.train.Enable='on';
+            app.Leds.led0.Enable='on';
+            % app.halo.Enable='on';
+            % app.demo.Enable='on';
+
+        end
+
+    end
+
+end

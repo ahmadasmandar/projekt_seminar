@@ -1,0 +1,66 @@
+classdef UIControls < handle
+    % public properties
+    properties (Access = public)
+        UI         matlab.ui.Figure
+        Container  matlab.ui.container.GridLayout
+    end
+
+    % private properties
+    properties (Access = private)
+        
+        UIintial_app          UIInitialize
+        UIbattery_app         UIBattery
+        UIrailway_app         UIRailway
+        UIleds_app            UILeds
+        UIhalogenLamp_app     UIHalogenLamp
+        UIdemomode_app  	  UIDemoMode
+        
+    end
+
+    % public methods
+    methods (Access = public)
+        % the class contructor has the same name as the class
+        function app = UIControls(UI, parent, id)
+            % create a new window
+            app.UI = UI;
+            %app.UI.Name = "Controls";
+
+            % create the main layout for the window
+            app.Container = uigridlayout(parent);
+            app.Container.RowHeight = {'1.5x', '0.8x', '1x', '1x', '1x', '1x' , '1x', '1x', '1x', '1x', '1x', '1x'};
+            app.Container.ColumnWidth = {'1x'};
+
+            % the 6th GUI component
+            app.UIbattery_app = UIBattery(app.UI, app.Container);
+            app.UIbattery_app.Container.Layout.Row = 2;
+            app.UIbattery_app.Container.Layout.Column = 1;
+            
+            % the 7th GUI component
+            app.UIrailway_app = UIRailway(app.UI, app.Container);
+            app.UIrailway_app.Container.Layout.Row = [3 5];
+            app.UIrailway_app.Container.Layout.Column = 1;
+            
+            % the 8th GUI component
+            app.UIleds_app = UILeds(app.UI, app.Container);
+            app.UIleds_app.Container.Layout.Row = [6 8];
+            app.UIleds_app.Container.Layout.Column = 1;
+            
+            % the 9th GUI component
+            app.UIhalogenLamp_app = UIHalogenLamp(app.UI, app.Container);
+            app.UIhalogenLamp_app.Container.Layout.Row = [9 10];
+            app.UIhalogenLamp_app.Container.Layout.Column = 1;
+            
+            % the 10th GUI component
+            app.UIdemomode_app = UIDemoMode(app.UI, app.Container);
+            app.UIdemomode_app.Container.Layout.Row = 11;
+            app.UIdemomode_app.Container.Layout.Column = 1;
+            
+            % the third GUI component
+            app.UIintial_app = UIInitialize(app.UI,app.Container,app.UIbattery_app,app.UIrailway_app,app.UIleds_app,app.UIhalogenLamp_app,app.UIdemomode_app);
+            app.UIintial_app.Container.Layout.Row = 1;
+            app.UIintial_app.Container.Layout.Column = 1;
+
+            
+        end
+    end
+end
