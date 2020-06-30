@@ -62,7 +62,7 @@ classdef UIRailway < matlab.apps.AppBase
             obj.train_dir_right.Enable = 'off';
             obj.train_dir_right.FontSize = 26;
             x = get(obj.UI , 'position');
-            obj.train_dir_right.Position = [0.25*x(3) 120 140 33];
+            obj.train_dir_right.Position = [0.1*x(3) 120 140 33];
 
             % Create train_speed
             obj.train_speed = uislider(obj.uibuttongroup2);
