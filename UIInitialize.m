@@ -168,7 +168,7 @@ classdef UIInitialize < matlab.apps.AppBase
 
                     receive_init_from_UIInitialize(app.webcam_obj, app);
                     receive_init_from_UIInitialize(app.laser_obj, app);
-                    % receive_init_from_UIInitialize(app.webcam_obj, app);
+                    receive_init_from_UIInitialize(app.multispectral_obj, app);
                     % receive_init_from_UIInitialize(app.webcam_obj, app);
 
 
