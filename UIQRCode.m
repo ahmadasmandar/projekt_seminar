@@ -17,10 +17,11 @@ classdef UIQRCode < matlab.apps.AppBase
         TextLabel               matlab.ui.control.Label
         TextLabel2              matlab.ui.control.Label
     end
+    
 
     methods (Access = public)
         % --- Executes on button press in live_webcam.
-        % Receive the UIInitiaialize app
+        % Receive the UIInitiaialize app from UIInitialize
         function receive_init_from_UIInitialize(app, app_obj)
             app.init_app=app_obj;
         end
@@ -33,7 +34,7 @@ classdef UIQRCode < matlab.apps.AppBase
                 waitfor(msgbox('Livebild konnte nicht geladen werden.', 'Fehler', 'warn'));
             end
         
-            app = enable_webcam(app, 'on');
+            enable_webcam(app, 'on');
 
         end
 
@@ -59,7 +60,7 @@ classdef UIQRCode < matlab.apps.AppBase
                 waitfor(msgbox('Interner Fehler während der QR-Code-Erkennung.', 'Fehler', 'warn'));
             end
         
-            app = enable_webcam(app, 'on');
+            enable_webcam(app, 'on');
         end
 
         % --- Executes on button press in snapshot_webcam.
@@ -74,7 +75,7 @@ classdef UIQRCode < matlab.apps.AppBase
                 end
                 fprintf('Webcam end\n');
             
-                app = enable_webcam(app, 'on');
+                enable_webcam(app, 'on');
             end
 
         % --- Executes on button press in stop_webcam.
@@ -86,7 +87,7 @@ classdef UIQRCode < matlab.apps.AppBase
                 waitfor(msgbox('Livebild konnte gestoppt werden.', 'Fehler', 'warn'));
             end
         
-            app = enable_webcam(app, 'on');
+            enable_webcam(app, 'on');
 
         end
 

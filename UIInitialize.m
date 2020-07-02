@@ -125,7 +125,7 @@ classdef UIInitialize < matlab.apps.AppBase
 
     methods(Access = public)
         
-        function connect_serial_port_Callback(app,~)
+        function connect_serial_port_Callback(app , ~)
 
                 app.connect_serial_port.Enable = 'off';
                 fclose all ;
@@ -165,14 +165,9 @@ classdef UIInitialize < matlab.apps.AppBase
 
                     % *************************
                     % send the app to the Cameras
-                    % just to copy
-                    % app.webcam_obj=app.cameras_app.QRCode;
-                    % app.laser_obj=app.cameras_app.Laser;
-                    % app.multispectral_obj=app.cameras_app.MultiSpectral;
-                    % app.infrared_obj=app.cameras_app.InfraRed;
 
                     receive_init_from_UIInitialize(app.webcam_obj, app);
-                    % receive_init_from_UIInitialize(app.webcam_obj, app);
+                    receive_init_from_UIInitialize(app.laser_obj, app);
                     % receive_init_from_UIInitialize(app.webcam_obj, app);
                     % receive_init_from_UIInitialize(app.webcam_obj, app);
 
@@ -219,10 +214,10 @@ classdef UIInitialize < matlab.apps.AppBase
                                 pause(12);
             
                                 capture_stop_Callback(app.laser_obj, [], app);
-                                app = guidata(happect);
+                                % app = guidata(happect);
             
                                 capture_calc_Callback(app.laser_obj, [], app);
-                                app = guidata(happect);
+                                % app = guidata(happect);
                             end
                         end
                     case 'lap1'
@@ -232,15 +227,15 @@ classdef UIInitialize < matlab.apps.AppBase
                             % Camera often crashes Matlab
                             if is_multispectral(app) && app.halo.halo0.Value ~= 1
                                 snapshot_multispectral_Callback(app.multispectral_obj, [], app);
-                                app = guidata(happect);
+                                % app = guidata(happect);
                             end
             
                             if is_webcam(app) && app.ledA.Value ~= 1
                                 snapshot_webcam_Callback(app.webcam_obj, [], app);
-                                app = guidata(happect);
+                                % app = guidata(happect);
             
                                 qr_button_Callback(app.webcam_obj, [], app);
-                                app = guidata(happect);
+                                % app = guidata(happect);
                             end
                         end
                     case 'halo'
@@ -249,17 +244,17 @@ classdef UIInitialize < matlab.apps.AppBase
                             if is_multispectral(app)
                                 pause(0.2);
                                 snapshot_multispectral_Callback(app.multispectral_obj, [], app);
-                                app = guidata(happect);
+                                % app = guidata(happect);
                             end
                         end
                     case 'led'
                         if app.demo
                             if is_webcam(app)
                                 snapshot_webcam_Callback(app.webcam_obj, [], app);
-                                app = guidata(happect);
+                                % app = guidata(happect);
             
                                 qr_button_Callback(app.webcam_obj, [], app);
-                                app = guidata(happect);
+                                % app = guidata(happect);
                             end
                         end
                     case 'bat'
@@ -366,12 +361,13 @@ classdef UIInitialize < matlab.apps.AppBase
 
         function app = enable_webcam(app, value)
             if ~is_webcam(app) || app.demo
-                disp('is not webcame');
-                disp(app.demo);
+
+                % disp('is not webcame');
+                % disp(app.demo);
+
                 return;
             end
-            disp('is webcame');
-        
+            % disp('is webcame');
             app.webcam_obj.LiveView.Enable=value;
             app.webcam_obj.StopView.Enable=value;
             app.webcam_obj.TakePic.Enable=value;
@@ -383,7 +379,7 @@ classdef UIInitialize < matlab.apps.AppBase
         end
 
         function app  = enable_laser(app, value)
-            if ~is_laser(app ) || app .demo
+            if ~is_laser(app) || app .demo
                 return;
             end
         
@@ -396,13 +392,13 @@ classdef UIInitialize < matlab.apps.AppBase
             app.laser_obj.cut_begin.Enable=value;
             app.laser_obj.cut_end.Enable=value;
         
-            if is_serial_port(app )
+            if is_serial_port(app)
                 app.demo_app.demomode.Enable = value;
             end
         end
 
         function app  = enable_multispectral(app, value)
-            if ~is_laser(app ) || app .demo
+            if ~is_laser(app) || app .demo
                 return;
             end
         
@@ -411,21 +407,20 @@ classdef UIInitialize < matlab.apps.AppBase
             app.multispectral_obj.StopView.Enable=value;
             app.multispectral_obj.TakePic.Enable=value;
         
-            if is_serial_port(app )
+            if is_serial_port(app)
                 app.demo_app.demomode.Enable = value;
             end
         end
 
         function app  = enable_infrared(app, value)
-            if ~is_laser(app ) || app .demo
+            if ~is_laser(app) || app .demo
                 return;
             end
-        
             app.infrared_obj.live_infrared.Enable=value;
             app.infrared_obj.stop_infrared.Enable=value;
             app.infrared_obj.snapshot_infrared.Enable=value;
         
-            if is_serial_port(app )
+            if is_serial_port(app)
                 app.demo_app.demomode.Enable = value;
             end
         end
