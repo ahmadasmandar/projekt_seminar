@@ -398,6 +398,14 @@ classdef UILaser < matlab.apps.AppBase
         img = (img - minv) ./ diff;
     end
     
+    function camview = set_camview_default(app,camview)
+        camview.XTick = [];
+        camview.YTick = [];
+        camview.CLim = [0, 255];
+        camview.CLimMode = 'manual';
+        camview.DataAspectRatio = [1, 1, 1];
+    end
+    
     function img = normalize_adjust_255(app, img)
         img = normalize_adjust(app, img) .* 255;
     end
