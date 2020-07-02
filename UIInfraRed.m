@@ -109,7 +109,7 @@ classdef UIInfraRed < matlab.apps.AppBase
 
         enable_infrared(app.init_app, 'off');
     
-        if ~app.init_app.infrared_obj.preview(@preview_infrared_adjust, app.camview_infrared, true)
+        if ~app.init_app.infrared.preview(@preview_infrared_adjust, app.camview_infrared, true)
             waitfor(msgbox('Livebild konnte nicht geladen werden.', 'Fehler', 'warn'));
         end
     
@@ -123,7 +123,7 @@ classdef UIInfraRed < matlab.apps.AppBase
 
     
         fprintf('Infrared start\n');
-        if ~app.init_app.infrared_obj.snapshot(@infrared_adjust, app.camview_infrared)
+        if ~app.init_app.infrared.snapshot(@infrared_adjust, app.camview_infrared)
             waitfor(msgbox('Einzelbild konnte nicht geladen werden.', 'Fehler', 'warn'));
         end
         app.camview_infrared = set_camview_default(app, app.camview_infrared);
@@ -138,13 +138,13 @@ classdef UIInfraRed < matlab.apps.AppBase
 
         enable_infrared(app.init_app, 'off');
 
-        if ~app.init_app.infrared_obj.stoppreview()
+        if ~app.init_app.infrared.stoppreview()
             waitfor(msgbox('Livebild konnte gestoppt werden.', 'Fehler', 'warn'));
         end
     
         enable_infrared(app.init_app, 'on');
     end
-    
+
 
     function camview = set_camview_default(app,camview)
         camview.XTick = [];

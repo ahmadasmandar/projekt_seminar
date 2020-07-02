@@ -204,57 +204,48 @@ classdef UIInitialize < matlab.apps.AppBase
         function serial_callback(app, type, parameter)
             
                 switch(type)
-                        % need to be configured after finishing cams
+
                     case 'prelap1'
                         if app.demo
                             if is_laser(app)
                                 capture_start_Callback(app.laser_obj, [], app);
-                                app = guidata(happect);
             
                                 pause(12);
             
                                 capture_stop_Callback(app.laser_obj, [], app);
-                                % app = guidata(happect);
             
                                 capture_calc_Callback(app.laser_obj, [], app);
-                                % app = guidata(happect);
                             end
                         end
                     case 'lap1'
                     case 'prelap0'
                     case 'lap0'
                         if app.demo
-                            % Camera often crashes Matlab
+                            %? Camera often crashes Matlab
                             if is_multispectral(app) && app.halo.halo0.Value ~= 1
                                 snapshot_multispectral_Callback(app.multispectral_obj, [], app);
-                                % app = guidata(happect);
                             end
             
                             if is_webcam(app) && app.ledA.Value ~= 1
                                 snapshot_webcam_Callback(app.webcam_obj, [], app);
-                                % app = guidata(happect);
             
                                 qr_button_Callback(app.webcam_obj, [], app);
-                                % app = guidata(happect);
                             end
                         end
                     case 'halo'
                         if app.demo
-                            % Camera often crashes Matlab
+                            %? Camera often crashes Matlab
                             if is_multispectral(app)
                                 pause(0.2);
                                 snapshot_multispectral_Callback(app.multispectral_obj, [], app);
-                                % app = guidata(happect);
                             end
                         end
                     case 'led'
                         if app.demo
                             if is_webcam(app)
                                 snapshot_webcam_Callback(app.webcam_obj, [], app);
-                                % app = guidata(happect);
             
                                 qr_button_Callback(app.webcam_obj, [], app);
-                                % app = guidata(happect);
                             end
                         end
                     case 'bat'
@@ -262,8 +253,7 @@ classdef UIInitialize < matlab.apps.AppBase
                     otherwise
                         error('Unknown SerialPort Callback "%s".', type);
                 end
-            
-                % Update app structure
+
         end
 
         function app = enable_serial(app, value)

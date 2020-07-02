@@ -182,7 +182,7 @@ classdef UILaser < matlab.apps.AppBase
     % *******************************
     % the Buttonfuctions
 
-    % app.init_app.laser_obj try to call the Fuctions in the Laser object > parameter > videoinput class
+    % app.init_app.laser try to call the Fuctions in the Laser object > parameter > videoinput class
 
     methods(Access = public)
     % --- Executes on button press in live_laser.
@@ -191,7 +191,7 @@ classdef UILaser < matlab.apps.AppBase
             enable_laser(app.init_app, 'off');
 
             colormap(app.camview_laser, 'gray');
-            if ~app.init_app.laser_obj.preview(@preview_normalize_adjust_255, app.camview_laser)
+            if ~app.init_app.laser.preview(@preview_normalize_adjust_255, app.camview_laser)
                 waitfor(msgbox('Livebild konnte nicht geladen werden.', 'Fehler', 'warn'));
             end
         
@@ -205,7 +205,7 @@ classdef UILaser < matlab.apps.AppBase
 
         enable_laser(app.init_app, 'off');
 
-        if ~app.init_app.laser_obj.stoppreview()
+        if ~app.init_app.laser.stoppreview()
             waitfor(msgbox('Livebild konnte gestoppt werden.', 'Fehler', 'warn'));
         end
         enable_laser(app.init_app, 'on');
@@ -216,7 +216,7 @@ classdef UILaser < matlab.apps.AppBase
 
         enable_laser(app.init_app, 'off');
     
-        if app.init_app.laser_obj.stoppreview() == false || app.init_app.laser_obj.config({@config_laser_start, app.init_app.demo}) == false
+        if app.init_app.laser.stoppreview() == false || app.init_app.laser.config({@config_laser_start, app.init_app.demo}) == false
             waitfor(msgbox('Interner Fehler während der Laserlinienbild-Aufnahmekonfiguration.', 'Fehler', 'warn'));
     
             enable_laser(app.init_app, 'on');
@@ -235,7 +235,7 @@ classdef UILaser < matlab.apps.AppBase
 
         enable_laser(app.init_app, 'off');
     
-        [success, images] = app.init_app.laser_obj.config(@get_images);
+        [success, images] = app.init_app.laser.config(@get_images);
         if success && ~islogical(images)
             n = size(images, 4);
             app.laser_images = images;
@@ -251,7 +251,7 @@ classdef UILaser < matlab.apps.AppBase
                 end
                 capture_img = app.laser_images(:, :, 1, i);
                 image(capture_img, 'parent', app.camview_laser);
-                app.camview_laser = set_camview_default(app.camview_laser);
+                app.camview_laser = set_camview_default(app,app.camview_laser);
                 app.image_slider.Value = i;
                 app.img_count.String = sprintf('%d von %d', i, n);
                 pause(0.001);
@@ -397,7 +397,7 @@ classdef UILaser < matlab.apps.AppBase
         diff = maxv - minv;
         img = (img - minv) ./ diff;
     end
-    
+
     function camview = set_camview_default(app,camview)
         camview.XTick = [];
         camview.YTick = [];

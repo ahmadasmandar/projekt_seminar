@@ -108,7 +108,7 @@ classdef UIMultiSpectral < matlab.apps.AppBase
             enable_multispectral(app.init_app, 'off');
         
             colormap(app.camview_multispectral, 'hot');
-            if ~app.init_app.multispectral_obj.preview(@preview_gray, app.camview_multispectral)
+            if ~app.init_app.multispectral.preview(@preview_gray, app.camview_multispectral)
                 waitfor(msgbox('Livebild konnte nicht geladen werden.', 'Fehler', 'warn'));
             end
         
@@ -123,7 +123,7 @@ classdef UIMultiSpectral < matlab.apps.AppBase
         
             fprintf('Multispectral start\n');
             colormap(app.camview_multispectral, 'hot');
-            if ~app.init_app.multispectral_obj.snapshot(false, app.camview_multispectral)
+            if ~app.init_app.multispectral.snapshot(false, app.camview_multispectral)
                 waitfor(msgbox('Einzelbild konnte nicht geladen werden.', 'Fehler', 'warn'));
             end
             fprintf('Multispectral end\n');
@@ -137,7 +137,7 @@ classdef UIMultiSpectral < matlab.apps.AppBase
             enable_multispectral(app.init_app, 'off');
 
         
-            if ~app.init_app.multispectral_obj.stoppreview()
+            if ~app.init_app.multispectral.stoppreview()
                 waitfor(msgbox('Livebild konnte gestoppt werden.', 'Fehler', 'warn'));
             end
         
