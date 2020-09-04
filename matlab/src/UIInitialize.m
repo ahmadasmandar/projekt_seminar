@@ -41,13 +41,20 @@ classdef UIInitialize < matlab.apps.AppBase
         % the cameras objects from param class >>  videoinput classs
         webcam
         infrared
-        multispectral
+        multispectral   
         laser
         
     end
-    properties (Access = public)
+    properties (Access = private)
         check
     end
+     methods
+
+        function s = struct_app(app,obj)
+            s = struct(obj);
+        end
+     end
+
     methods (Access = private)
         % Close request function: UIFigure
         function MainAppCloseRequest(app, event)
@@ -281,16 +288,6 @@ classdef UIInitialize < matlab.apps.AppBase
             app.camera_init.Enable='off';
 
             all_success = true;
-
-            if isfield(app, 'gigelist') == false || istable(app.gigelist) == false
-                try
-                    app.gigelist = gigecamlist(); % speed up gigecam initialization
-                catch e
-                    all_success = false;
-                    warning('Exception in gigecamlist(): %s', getReport(e));
-                end
-            end
-
             if ~is_webcam(app)
                 try
                     app.webcam = app.param.camera_webcam();
@@ -302,35 +299,49 @@ classdef UIInitialize < matlab.apps.AppBase
                 end
             end
 
-            if ~is_laser(app)
-                try
-                    app.laser = app.param.camera_laser();
-                    enable_laser(app, 'on');
-                catch e
-                    all_success = false;
-                    warning('Exception in camera_laser(): %s', getReport(e));
-                end
-            end
+            % this options should be disabled to test at home
 
-            if ~is_infrared(app)
-                try
-                    app.infrared = app.param.camera_infrared(app.gigelist);
-                    enable_infrared(app, 'on');
-                catch e
-                    all_success = false;
-                    warning('Exception in camera_infrared(): %s', getReport(e));
-                end
-            end
+            % make gigelist to speedup the init process
 
-            if ~is_multispectral(app)
-                try
-                    app.multispectral = app.param.camera_multispectral(app.gigelist);
-                    enable_multispectral(app, 'on');
-                catch e
-                    all_success = false;
-                    warning('Exception in camera_multispectral(): %s', getReport(e));
-                end
-            end
+            % if isfield(app, 'gigelist') == false || istable(app.gigelist) == false
+            %     try
+            %         app.gigelist = gigecamlist(); % speed up gigecam initialization
+            %     catch e
+            %         all_success = false;
+            %         warning('Exception in gigecamlist(): %s', getReport(e));
+            %     end
+            % end
+
+
+            % if ~is_laser(app)
+            %     try
+            %         app.laser = app.param.camera_laser();
+            %         enable_laser(app, 'on');
+            %     catch e
+            %         all_success = false;
+            %         warning('Exception in camera_laser(): %s', getReport(e));
+            %     end
+            % end
+
+            % if ~is_infrared(app)
+            %     try
+            %         app.infrared = app.param.camera_infrared(app.gigelist);
+            %         enable_infrared(app, 'on');
+            %     catch e
+            %         all_success = false;
+            %         warning('Exception in camera_infrared(): %s', getReport(e));
+            %     end
+            % end
+
+            % if ~is_multispectral(app)
+            %     try
+            %         app.multispectral = app.param.camera_multispectral(app.gigelist);
+            %         enable_multispectral(app, 'on');
+            %     catch e
+            %         all_success = false;
+            %         warning('Exception in camera_multispectral(): %s', getReport(e));
+            %     end
+            % end
 
             % Set preview data to native camera bit depth (default is 8 bit)
             imaqmex('feature', '-previewFullBitDepth', true);
@@ -410,13 +421,27 @@ classdef UIInitialize < matlab.apps.AppBase
             end
         end
         function enabled = is_serial_port(app)
-            enabled = isfield(app, 'serial') && isa(app.serial, 'class_serial_port');
+            app.check= any(strcmp(properties(app), 'serial'));
+            if(app.check == 1 )
+                 enabled= isa(app.serial, 'class_serial_port');
+                 disp("success to detect serial");
+            else
+                disp("failed to detect serial object");
+            end
+            
         end
 
         function enabled = is_webcam(app)
-            app.check = struct(app);
-            enabled = isfield(app.check, 'webcam') && isa(app.webcam, 'class_videoinput');
-            % enabled = isa(app.webcam, 'class_videoinput');
+            % app.check = struct(app);
+
+            enabled = isfield(app, 'webcam') && isa(app.webcam, 'class_videoinput');
+            % disp (app)
+            if ~(enabled)
+                disp("failed to detect webcam object");
+            else
+                disp("success to detet webcam");
+            end
+
         end
         
         function enabled = is_laser(app)
