@@ -424,39 +424,62 @@ classdef UIInitialize < matlab.apps.AppBase
             app.check= any(strcmp(properties(app), 'serial'));
             if(app.check == 1 )
                  enabled= isa(app.serial, 'class_serial_port');
-                 disp("success to detect serial");
+                %  disp("success to detect serial");
             else
                 disp("failed to detect serial object");
             end
-            
+
         end
 
         function enabled = is_webcam(app)
-            % app.check = struct(app);
-
-            enabled = isfield(app, 'webcam') && isa(app.webcam, 'class_videoinput');
-            % disp (app)
-            if ~(enabled)
-                disp("failed to detect webcam object");
-            else
-                disp("success to detet webcam");
-            end
+            app.check= any(strcmp(properties(app), 'webcam'));
+            if(app.check == 1 )
+                enabled= isa(app.webcam, 'class_videoinput');
+                % disp("success to detect webcame");
+           else
+                disp("failed to detect webcame object");
+           end
 
         end
         
         function enabled = is_laser(app)
-            app.check = struct(app);
-            enabled = isfield(app.check, 'laser') && isa(app.laser, 'class_videoinput');
+
+            app.check= any(strcmp(properties(app), 'laser'));
+            if(app.check == 1 )
+                enabled= isa(app.laser, 'class_videoinput');
+                % disp("success to detect laser");
+           else
+                disp("failed to detect laser object");
+           end
+
         end
         
         function enabled = is_infrared(app)
-            app.check = struct(app);
-            enabled = isfield(app.check, 'infrared') && isa(app.infrared, 'class_gigecam');
+            % old version  with struct..
+            % app.check = struct(app);
+            % enabled = isfield(app.check, 'infrared') && isa(app.infrared, 'class_gigecam');
+
+            app.check= any(strcmp(properties(app), 'infrared'));
+            if(app.check == 1 )
+                enabled= isa(app.infrared, 'class_gigecam');
+                % disp("success to detect infrared");
+           else
+                disp("failed to detect infrared object");
+           end
+
         end
         
         function enabled = is_multispectral(app)
-            app.check = struct(app);
-            enabled = isfield(app.check, 'multispectral') && isa(app.multispectral, 'class_gigecam');
+            % app.check = struct(app);
+            % enabled = isfield(app.check, 'multispectral') && isa(app.multispectral, 'class_gigecam');
+
+            app.check= any(strcmp(properties(app), 'multispectral'));
+            if(app.check == 1 )
+                enabled= isa(app.multispectral, 'class_gigecam');
+                % disp("success to detect multispectral");
+           else
+                disp("failed to detect multispectral object");
+           end
         end
         % function test_callback(app, parameter,type)
         %     disp("type from test")
