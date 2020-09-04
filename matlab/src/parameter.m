@@ -14,7 +14,7 @@ function serial = serial_port(callback_receive)
 %# OUTPUT serial: The camera object
 %#
     % set serial port identifiers
-    port = 'COM2';
+    port = 'COM8';
     baudrate = 115200;
     terminator = 'CR/LF';
 
@@ -33,14 +33,14 @@ function camera = camera_webcam
 %#
     %! for test from home with logitech webcam
 
-    % name = 'QR-Code webcam';
-    % model = 'Logitech HD Webcam C615';
-    % format = 'RGB24_640x480';
+    name = 'QR-Code webcam';
+    model = 'Logitech HD Webcam C615';
+    format = 'RGB24_640x480';
 
     % set camera identifiers
-    name = 'QR-Code webcam';
-    model = 'USB2.0 Camera';
-    format = 'YUY2_640x480';
+    % name = 'QR-Code webcam';
+    % model = 'USB2.0 Camera';
+    % format = 'YUY2_640x480';
 
     % initialize camera
     camera = class_videoinput(name, 'winvideo', format, 'rgb', model);

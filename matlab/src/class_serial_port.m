@@ -86,7 +86,7 @@ classdef class_serial_port < handle
 
                 fclose(app.handle);
                 delete(app.handle);
-            end
+                end
 
             clear app.handle;
 

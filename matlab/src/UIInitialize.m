@@ -52,16 +52,25 @@ classdef UIInitialize < matlab.apps.AppBase
         % Close request function: UIFigure
         function MainAppCloseRequest(app, event)
             % Delete both apps
-            instrreset
             delete(app.battery);
             delete(app.train);
             delete(app.leds);
             delete(app.halo);
             delete(app.demo_app);
-            delete(app);
+            delete(app.serial);
             fclose all;
             close all Force;
+            instrreset;
+            % reset_serial(app);
+            delete(app);
+            clear all;
         end
+
+        function reset_serial (app)
+            % disp("reset serial was called: ...")
+            instrreset;
+        end
+
     end
 
     % public methods
