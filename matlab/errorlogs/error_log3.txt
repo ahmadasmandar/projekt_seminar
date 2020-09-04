@@ -1,0 +1,188 @@
+>> UILegoCity
+constructor created
+
+ans =
+
+           1           1        1920        1080
+
+
+ans = 
+
+  UILegoCity with properties:
+
+           UI: [1×1 Figure]
+    Container: [1×1 GridLayout]
+
+Set DemoMode state to 0.
+SerialPort write: "&d:0;"
+SerialPort read: "&d:0;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 0"
+Set LED state to 0.
+SerialPort write: "&L:0;"
+SerialPort read: "&L:0;\r"
+SerialPort read: ""
+SerialPort read: "Set LED OFF"
+Set Halogen state to 0.
+SerialPort write: "&H:0;"
+SerialPort read: "&H:0;\r"
+SerialPort read: ""
+SerialPort read: "Set Halo OFF"
+Set train speed to 0 and direction to 1.
+SerialPort write: "&D;1;0;"
+SerialPort read: "&D;1;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 1	Speed0"
+Closed connection to COM-Port COM2.
+Warning: Connecting to COM-Port COM2 failed: Error using serial/fopen (line 72)
+Open failed: Instrument object OBJ is an invalid object.
+
+Error in class_serial_port/connect (line 61)
+                fopen(obj.handle);
+
+Error in UIInitialize/connect_serial_port_Callback (line 145)
+                            success = app.serial.connect();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+Connected to COM-Port COM2.
+serial object received successfully
+train_serial object received successfully
+halogen_serial object received successfully
+demoButton_serial object received successfully
+demo flag received and the value is 
+   0
+
+     1
+
+Set LED state to 1.
+SerialPort write: "&L:1;"
+SerialPort read: "&L:1;\r"
+SerialPort read: ""
+SerialPort read: "Set LED LED1"
+serial data sent successfully
+     2
+
+Set LED state to 2.
+SerialPort write: "&L:2;"
+SerialPort read: "&L:2;\r"
+SerialPort read: ""
+SerialPort read: "Set LED LED2"
+serial data sent successfully
+     1
+
+Set LED state to 1.
+SerialPort write: "&L:1;"
+SerialPort read: "&L:1;\r"
+SerialPort read: ""
+SerialPort read: "Set LED LED1"
+serial data sent successfully
+     0
+
+Set LED state to 0.
+SerialPort write: "&L:0;"
+SerialPort read: "&L:0;\r"
+SerialPort read: "
+S
+et LED OFF"
+serial data sent successfully
+Set Halogen state to 1.
+SerialPort write: "&H:1;"
+SerialPort read: "&H:1;\r"
+SerialPort read: ""
+SerialPort read: "Set Halo 1"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 187)
+                            obj.call_callback('halo', false);
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in class_serial_port/send (line 106)
+                pause(0.05);
+
+Error in class_serial_port/setHalogen (line 131)
+            success = obj.send(sprintf('&H:%d;', state));
+
+Error in UIHalogenLamp/ButtonGroupSelectionChanged (line 38)
+                app.serial_handler.setHalogen(val);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback " 
+Set Halogen state to 0.
+SerialPort write: "&H:0;"
+SerialPort read: "&H:0;\r"
+SerialPort read: "S"
+SerialPort read: "et Halo OFF"
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and {F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both
+have GigE Vision cameras, we recommend putting them on separate subnets. 
+Warning: Exception in gigecamlist(): Unrecognized property 'gigelist' for class 'UIInitialize'.
+
+Error in UIInitialize/camera_init_Callback (line 290)
+                    app.gigelist = gigecamlist(); % speed up gigecam initialization
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+check is webcame and result
+   0
+
+Found videoinput camera QR-Code webcam at ID 2.
+  class_videoinput with properties:
+
+           name: 'QR-Code webcam'
+           type: 'winvideo'
+    device_name: 'USB2.0 Camera'
+         format: 'YUY2_640x480'
+    color_space: 'rgb'
+             id: 2
+
+check is webcame and result
+   0
+
+success to activate the cameras
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and {F71296B1-54E4-4C34-9C9D-C13823B664DE} are on the same subnet.  If both
+have GigE Vision cameras, we recommend putting them on separate subnets. 
+Found videoinput camera laser camera at ID 3.
+Warning: The ROIPosition property was modified by the camera. 
+Warning: The ROIPosition property was modified by the camera. 
+Connected to laser camera
+Warning: The ROIPosition property was modified by the camera. 
+Found videoinput camera infrared camera at ID 1.
+Warning: Exception in camera_multispectral(): Unrecognized method, property, or field 'gigelist' for class 'UIInitialize'.
+
+Error in UIInitialize/camera_init_Callback (line 332)
+                    app.multispectral = app.param.camera_multispectral(app.gigelist);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+>> 

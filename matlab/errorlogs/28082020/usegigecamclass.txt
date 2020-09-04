@@ -1,0 +1,217 @@
+constructor created
+
+ans =
+
+           1           1        1920        1080
+
+
+ans = 
+
+  UILegoCity with properties:
+
+           UI: [1×1 Figure]
+    Container: [1×1 GridLayout]
+
+Connected to COM-Port COM2.
+serial object received successfully
+train_serial object received successfully
+halogen_serial object received successfully
+demoButton_serial object received successfully
+demo flag received and the value is 
+   0
+
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both
+have GigE Vision cameras, we recommend putting them on separate subnets. 
+SerialPort read: "BAT:772"
+type from serial init
+bat
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY
+to see the visible public details of an object. See 'help struct' for
+more information. 
+Found videoinput camera QR-Code webcam at ID 2.
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY
+to see the visible public details of an object. See 'help struct' for
+more information. 
+is webcame
+success to activate the cameras
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY
+to see the visible public details of an object. See 'help struct' for
+more information. 
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE} are on the same subnet.  If both
+have GigE Vision cameras, we recommend putting them on separate subnets. 
+Found videoinput camera laser camera at ID 3.
+we rae in config 
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If
+both have GigE Vision cameras, we recommend putting them on separate
+subnets. 
+SerialPort read: "BAT:772"
+type from serial init
+bat
+Warning: Connecting to gige failed: videoinput('laser camera', 3,
+'Mono8'). Error using class_videoinput/connect (line 68)
+Invalid input argument specified. Input can be either an Index, IP
+Address or a Serial Number as returned by 'gigecamlist' function.
+
+Error in class_videoinput/config (line 97)
+            if obj.connect() == false
+
+Error in parameter>camera_laser (line 85)
+    camera.config(@set_ROI_pos);
+
+Error in UIInitialize/camera_init_Callback (line 300)
+                    app.laser = app.param.camera_laser();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Warning: Config error: Can't connect to camera laser camera. 
+Warning: Calling STRUCT on an object prevents the object from hiding
+its implementation details and should thus be avoided. Use DISP or
+DISPLAY to see the visible public details of an object. See 'help
+struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding
+its implementation details and should thus be avoided. Use DISP or
+DISPLAY to see the visible public details of an object. See 'help
+struct' for more information. 
+Found videoinput camera infrared camera at ID 1.
+Warning: Calling STRUCT on an object prevents the object from hiding
+its implementation details and should thus be avoided. Use DISP or
+DISPLAY to see the visible public details of an object. See 'help
+struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding
+its implementation details and should thus be avoided. Use DISP or
+DISPLAY to see the visible public details of an object. See 'help
+struct' for more information. 
+Warning: Exception in camera_multispectral(): Error using
+class_gigecam
+Error: File: class_gigecam.m Line: 173 Column: 9
+'stoppreview' is already defined as a method in the 'class_gigecam'
+class.
+
+Error in parameter>camera_multispectral (line 102)
+    camera = class_gigecam(name, format, model, manufacturer, list);
+
+Error in UIInitialize/camera_init_Callback (line 320)
+                    app.multispectral =
+                    app.param.camera_multispectral(app.gigelist);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Warning: Calling STRUCT on an object prevents the object from hiding
+its implementation details and should thus be avoided. Use DISP or
+DISPLAY to see the visible public details of an object. See 'help
+struct' for more information. 
+is a app
+axes
+  UIAxes with properties:
+
+             XLim: [0 300]
+             YLim: [0 250]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [11 11 541 423]
+
+  Show all properties
+
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If
+both have GigE Vision cameras, we recommend putting them on separate
+subnets. 
+SerialPort read: "BAT:772"
+type from serial init
+bat
+Warning: Connecting to gige failed: videoinput('infrared camera', 1,
+'Mono16'). Error using class_videoinput/connect (line 68)
+Invalid input argument specified. Input can be either an Index, IP
+Address or a Serial Number as returned by 'gigecamlist' function.
+
+Error in class_videoinput/preview (line 137)
+            if obj.connect() == false
+
+Error in UIInfraRed/live_infrared_Callback (line 123)
+        if ~app.init_app.infrared.preview(app,
+        app.camview_infrared,true)
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Warning: Preview error: Can't connect to camera infrared camera. 
+Warning: Calling STRUCT on an object prevents the object from hiding
+its implementation details and should thus be avoided. Use DISP or
+DISPLAY to see the visible public details of an object. See 'help
+struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding
+its implementation details and should thus be avoided. Use DISP or
+DISPLAY to see the visible public details of an object. See 'help
+struct' for more information. 
+is a app
+axes
+  UIAxes with properties:
+
+             XLim: [0 600]
+             YLim: [0 500]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [58 104 448 335]
+
+  Show all properties
+
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If
+both have GigE Vision cameras, we recommend putting them on separate
+subnets. 
+Warning: Connecting to gige failed: videoinput('laser camera', 3,
+'Mono8'). Error using class_videoinput/connect (line 68)
+Invalid input argument specified. Input can be either an Index, IP
+Address or a Serial Number as returned by 'gigecamlist' function.
+
+Error in class_videoinput/preview (line 137)
+            if obj.connect() == false
+
+Error in UILaser/live_laser_Callback (line 194)
+            if ~app.init_app.laser.preview(app, app.camview_laser)
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Warning: Preview error: Can't connect to camera laser camera. 
+SerialPort read: "BAT:772"
+type from serial init
+bat

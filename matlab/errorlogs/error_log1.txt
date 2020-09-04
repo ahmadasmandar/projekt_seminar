@@ -1,0 +1,579 @@
+>> UILegoCity
+constructor created
+
+ans =
+
+           1           1        1920        1080
+
+
+ans = 
+
+  UILegoCity with properties:
+
+           UI: [1�1 Figure]
+    Container: [1�1 GridLayout]
+
+Connected to COM-Port COM2.
+serial object received successfully
+train_serial object received successfully
+halogen_serial object received successfully
+demoButton_serial object received successfully
+demo flag received and the value is 
+   0
+
+Set train speed to 2 and direction to 0.
+SerialPort write: "&D;0;2;"
+SerialPort read: "&D;0;2;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed2"
+SerialPort read: "BAT:799"
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+Set train speed to 3 and direction to 1.
+SerialPort write: "&D;1;3;"
+SerialPort read: "&D;1;3;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 1	Speed3"
+Set train speed to 2 and direction to 1.
+SerialPort write: "&D;1;2;"
+SerialPort read: "&D;1;2;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 1	Speed2"
+Set train speed to 2 and direction to 1.
+SerialPort write: "&D;1;2;"
+SerialPort read: "&D;1;2;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 1	Speed2"
+SerialPort read: "BAT:794"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "794".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+
+
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "794".
+
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+ 
+> In instrcb (line 54) 
+Set train speed to 1 and direction to 0.
+SerialPort write: "&D;0;1;"
+SerialPort read: "&D;0;1;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed1"
+Set train speed to 0 and direction to 0.
+SerialPort write: "&D;0;0;"
+SerialPort read: "&D;0;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed0"
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and {F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both
+have GigE Vision cameras, we recommend putting them on separate subnets. 
+SerialPort read: "BAT:796"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "796".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in imaq.supportpackages.gige.internal.gigecamlist
+
+Error in gigecamlist (line 31)
+cams = imaq.supportpackages.gige.internal.gigecamlist;
+
+Error in UIInitialize/camera_init_Callback (line 290)
+                    app.gigelist = gigecamlist(); % speed up gigecam initialization
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "796".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in imaq.supportpackages.gige.internal.gigecamlist
+
+Error in gigecamlist (line 31)
+cams = imaq.supportpackages.gige.internal.gigecamlist;
+
+Error in UIInitialize/camera_init_Callback (line 290)
+                    app.gigelist = gigecamlist(); % speed up gigecam initialization
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+Warning: Exception in gigecamlist(): Unrecognized property 'gigelist' for class 'UIInitialize'.
+
+Error in UIInitialize/camera_init_Callback (line 290)
+                    app.gigelist = gigecamlist(); % speed up gigecam initialization
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+check is webcame and result
+   0
+
+Closed connection to QR-Code webcam
+failed to activate the cameras
+Warning: Exception in camera_webcam(): Error using class_videoinput (line 39)
+Can't find camera QR-Code webcam by DeviceName "Logitech HD Webcam C615"
+
+Error in parameter>camera_webcam (line 40)
+    camera = class_videoinput(name, 'winvideo', format, 'rgb', model);
+
+Error in UIInitialize/camera_init_Callback (line 299)
+                    app.webcam = app.param.camera_webcam();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and {F71296B1-54E4-4C34-9C9D-C13823B664DE} are on the same subnet.  If both
+have GigE Vision cameras, we recommend putting them on separate subnets. 
+SerialPort read: "BAT:799"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in imaqhwinfo (line 126)
+            if isempty(out.DeviceInfo)
+
+Error in class_videoinput (line 29)
+            info = imaqhwinfo(obj.type);
+
+Error in parameter>camera_laser (line 74)
+    camera = class_videoinput(name, 'gige', format, 'grayscale', model);
+
+Error in UIInitialize/camera_init_Callback (line 312)
+                    app.laser = app.param.camera_laser();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in imaqhwinfo (line 126)
+            if isempty(out.DeviceInfo)
+
+Error in class_videoinput (line 29)
+            info = imaqhwinfo(obj.type);
+
+Error in parameter>camera_laser (line 74)
+    camera = class_videoinput(name, 'gige', format, 'grayscale', model);
+
+Error in UIInitialize/camera_init_Callback (line 312)
+                    app.laser = app.param.camera_laser();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+Found videoinput camera laser camera at ID 3.
+Warning: Connecting to gige failed: videoinput('laser camera', 3, 'Mono8'). Error using videoinput (line 532)
+gige: Unable to open camera.  Verify that camera is connected and not in use.
+
+Error in class_videoinput/connect (line 61)
+                obj.handle = videoinput(obj.type, obj.id, obj.format);
+
+Error in class_videoinput/config (line 85)
+            if obj.connect() == false
+
+Error in parameter>camera_laser (line 79)
+    camera.config(@set_ROI_pos);
+
+Error in UIInitialize/camera_init_Callback (line 312)
+                    app.laser = app.param.camera_laser();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+Warning: Config error: Can't connect to camera laser camera. 
+Found videoinput camera infrared camera at ID 1.
+Warning: Exception in camera_multispectral(): Unrecognized method, property, or field 'gigelist' for class 'UIInitialize'.
+
+Error in UIInitialize/camera_init_Callback (line 332)
+                    app.multispectral = app.param.camera_multispectral(app.gigelist);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source, event)tryCallback(appdesigner.internal.service.AppManagementService.instance(), ... 
+Undefined function 'Set' for input arguments of type 'char'.
+
+Error in UIInitialize/camera_init_Callback (line 340)
+            Set preview data to native camera bit depth (default is 8 bit)
+ 
+Error using matlab.ui.control.internal.controller.ComponentController/executeUserCallback (line 382)
+Error while evaluating Button PrivateButtonPushedFcn.
+
+SerialPort read: "BAT:799"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "BAT:801"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "801".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "801".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "BAT:801"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "801".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "801".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "BAT:799"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "BAT:801"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "801".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "801".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "BAT:799"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "BAT:801"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "801".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "801".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "BAT:799"
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback (line 254)
+Unknown SerialPort Callback "799".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter, obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 201)
+                        obj.call_callback('bat', line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+>> 

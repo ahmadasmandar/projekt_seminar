@@ -1,0 +1,1284 @@
+>> UILegoCity
+constructor created
+
+ans =
+
+           1           1        1920        1080
+
+
+ans = 
+
+  UILegoCity with properties:
+
+           UI: [1×1 Figure]
+    Container: [1×1 GridLayout]
+
+Set DemoMode state to 0.
+SerialPort write: "&d:0;"
+SerialPort read: "&d:0;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 0"
+Set LED state to 0.
+SerialPort write: "&L:0;"
+SerialPort read: "&L:0;\r"
+SerialPort read: ""
+SerialPort read: "Set LED OFF"
+Set Halogen state to 0.
+SerialPort write: "&H:0;"
+SerialPort read: "&H:0;\r"
+SerialPort read: ""
+SerialPort read: "Set Halo OFF"
+Set train speed to 0 and direction to 1.
+SerialPort write: "&D;1;0;"
+SerialPort read: "&D;1;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 1	Speed0"
+Closed connection to COM-Port COM2.
+Warning: Connecting to COM-Port COM2 failed: Error using serial/fopen (line
+72)
+Open failed: Instrument object OBJ is an invalid object.
+
+Error in class_serial_port/connect (line 61)
+                fopen(obj.handle);
+
+Error in UIInitialize/connect_serial_port_Callback (line 146)
+                            success = app.serial.connect();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line
+344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Connected to COM-Port COM2.
+serial object received successfully
+train_serial object received successfully
+halogen_serial object received successfully
+demoButton_serial object received successfully
+demo flag received and the value is 
+   0
+
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both
+have GigE Vision cameras, we recommend putting them on separate subnets. 
+check is webcame and result
+   0
+
+Found videoinput camera QR-Code webcam at ID 2.
+success to activate the cameras
+Closed connection to laser camera
+Warning: Exception in camera_laser(): Error using class_videoinput (line
+39)
+Can't find camera laser camera by DeviceName "CamSys-EV76C560-Laser"
+
+Error in parameter>camera_laser (line 74)
+    camera = class_videoinput(name, 'gige', format, 'grayscale', model);
+
+Error in UIInitialize/camera_init_Callback (line 315)
+                    app.laser = app.param.camera_laser();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Found videoinput camera infrared camera at ID 1.
+Found gigecam camera multispectral camera at IP 192.168.1.1.
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both
+have GigE Vision cameras, we recommend putting them on separate subnets. 
+Connected to multispectral camera
+  class_videoinput with properties:
+
+           name: 'QR-Code webcam'
+           type: 'winvideo'
+    device_name: 'USB2.0 Camera'
+         format: 'YUY2_640x480'
+    color_space: 'rgb'
+             id: 2
+
+check the webcame
+check is webcame and result
+   1
+
+
+ans =
+
+  logical
+
+   1
+
+check is webcame and result
+   1
+
+Unrecognized method, property, or field 'demo' for class 'UIQRCode'.
+
+Error in UIQRCode/enable_webcam (line 100)
+            if ~is_webcam(app.init_app) || app.demo
+
+Error in UIQRCode/live_webcam_Callback (line 31)
+            app = enable_webcam(app, 'off');
+ 
+Error using matlab.ui.control.internal.controller.ComponentController/executeUserCallback (line 382)
+Error while evaluating Button PrivateButtonPushedFcn.
+
+Closed connection to QR-Code webcam
+Closed connection to infrared camera
+Closed connection to multispectral camera
+>> UILegoCity
+constructor created
+
+ans =
+
+           1           1        1920        1080
+
+
+ans = 
+
+  UILegoCity with properties:
+
+           UI: [1×1 Figure]
+    Container: [1×1 GridLayout]
+
+Set DemoMode state to 0.
+SerialPort write: "&d:0;"
+SerialPort read: "&d:0;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 0"
+Set LED state to 0.
+SerialPort write: "&L:0;"
+SerialPort read: "&L:0;\r"
+SerialPort read: ""
+SerialPort read: "Set LED OFF"
+Set Halogen state to 0.
+SerialPort write: "&H:0;"
+SerialPort read: "&H:0;\r"
+SerialPort read: ""
+SerialPort read: "Set Halo OFF"
+Set train speed to 0 and direction to 1.
+SerialPort write: "&D;1;0;"
+SerialPort read: "&D;1;0;\r"
+SerialPort read: "D"
+SerialPort read: "ive	Dir 1	Speed0"
+Closed connection to COM-Port COM2.
+Warning: Connecting to COM-Port COM2 failed: Error using serial/fopen (line
+72)
+Open failed: Instrument object OBJ is an invalid object.
+
+Error in class_serial_port/connect (line 61)
+                fopen(obj.handle);
+
+Error in UIInitialize/connect_serial_port_Callback (line 146)
+                            success = app.serial.connect();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Connected to COM-Port COM2.
+serial object received successfully
+train_serial object received successfully
+halogen_serial object received successfully
+demoButton_serial object received successfully
+demo flag received and the value is 
+   0
+
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both
+have GigE Vision cameras, we recommend putting them on separate subnets. 
+check is webcame and result
+   0
+
+Found videoinput camera QR-Code webcam at ID 2.
+success to activate the cameras
+Closed connection to laser camera
+Warning: Exception in camera_laser(): Error using class_videoinput (line
+39)
+Can't find camera laser camera by DeviceName "CamSys-EV76C560-Laser"
+
+Error in parameter>camera_laser (line 74)
+    camera = class_videoinput(name, 'gige', format, 'grayscale', model);
+
+Error in UIInitialize/camera_init_Callback (line 315)
+                    app.laser = app.param.camera_laser();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Found videoinput camera infrared camera at ID 1.
+Found gigecam camera multispectral camera at IP 192.168.1.1.
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both
+have GigE Vision cameras, we recommend putting them on separate subnets. 
+Connected to multispectral camera
+  class_videoinput with properties:
+
+           name: 'QR-Code webcam'
+           type: 'winvideo'
+    device_name: 'USB2.0 Camera'
+         format: 'YUY2_640x480'
+    color_space: 'rgb'
+             id: 2
+
+check the webcame
+check is webcame and result
+   1
+
+
+ans =
+
+  logical
+
+   1
+
+check is webcame and result
+   1
+
+Connected to QR-Code webcam
+check is webcame and result
+   1
+
+check is webcame and result
+   1
+
+Warning: IM2JAVA2D will be removed in a future release. 
+Warning: QR-Code exception: Unable to resolve the name
+client.j2se.BufferedImageLuminanceSource.
+
+Error in decode_qr (line 34)
+source = client.j2se.BufferedImageLuminanceSource(jimg);
+
+Error in UIQRCode/qr_button_Callback (line 49)
+                text = decode_qr(img);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+check is webcame and result
+   1
+
+Closed connection to QR-Code webcam
+Closed connection to infrared camera
+Closed connection to multispectral camera
+>> UILegoCity
+constructor created
+
+ans =
+
+  Columns 1 through 3
+
+           1           1        1920
+
+  Column 4
+
+        1080
+
+
+ans = 
+
+  UILegoCity with properties:
+
+           UI: [1×1 Figure]
+    Container: [1×1 GridLayout]
+
+Set DemoMode state to 0.
+SerialPort write: "&d:0;"
+SerialPort read: "&d:0;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 0"
+Set LED state to 0.
+SerialPort write: "&L:0;"
+SerialPort read: "&L:0;\r"
+SerialPort read: ""
+SerialPort read: "Set LED OFF"
+Set Halogen state to 0.
+SerialPort write: "&H:0;"
+SerialPort read: "&H:0;\r"
+SerialPort read: ""
+SerialPort read: "Set Halo OFF"
+Set train speed to 0 and direction to 1.
+SerialPort write: "&D;1;0;"
+SerialPort read: "&D;1;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 1	Speed0"
+Closed connection to COM-Port COM2.
+Warning: Connecting to COM-Port COM2
+failed: Error using serial/fopen (line
+72)
+Open failed: Instrument object OBJ is an
+invalid object.
+
+Error in class_serial_port/connect (line
+61)
+                fopen(obj.handle);
+
+Error in
+UIInitialize/connect_serial_port_Callback
+(line 146)
+                            success =
+                            app.serial.connect();
+
+Error in
+appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Connected to COM-Port COM2.
+serial object received successfully
+train_serial object received successfully
+halogen_serial object received successfully
+demoButton_serial object received successfully
+demo flag received and the value is 
+   0
+
+Warning: Both
+{70E64838-09CF-451D-A1A5-E93D287EA33F}
+and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}
+are on the same subnet. If both have GigE
+Vision cameras, we recommend putting them
+on separate subnets. 
+check is webcame and result
+   0
+
+Found videoinput camera QR-Code webcam at ID 2.
+success to activate the cameras
+Closed connection to laser camera
+Warning: Exception in camera_laser():
+Error using class_videoinput (line 39)
+Can't find camera laser camera by
+DeviceName "CamSys-EV76C560-Laser"
+
+Error in parameter>camera_laser (line 74)
+    camera = class_videoinput(name,
+    'gige', format, 'grayscale', model);
+
+Error in
+UIInitialize/camera_init_Callback (line
+315)
+                    app.laser =
+                    app.param.camera_laser();
+
+Error in
+appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Found videoinput camera infrared camera at ID 1.
+Found gigecam camera multispectral camera at IP 192.168.1.1.
+Warning: Both
+{70E64838-09CF-451D-A1A5-E93D287EA33F}
+and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}
+are on the same subnet. If both have GigE
+Vision cameras, we recommend putting them
+on separate subnets. 
+Connected to multispectral camera
+  class_videoinput with properties:
+
+           name: 'QR-Code webcam'
+           type: 'winvideo'
+    device_name: 'USB2.0 Camera'
+         format: 'YUY2_640x480'
+    color_space: 'rgb'
+             id: 2
+
+check the webcame
+check is webcame and result
+   1
+
+
+ans =
+
+  logical
+
+   1
+
+Set train speed to 9 and direction to 0.
+SerialPort write: "&D;0;9;"
+SerialPort read: "&D;0;9;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+Set DemoMode state to 1.
+SerialPort write: "&d:1;"
+SerialPort read: "&d:1;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 1"
+demomode value is 1
+Warning: DemoMode exception: Unable to
+resolve the name
+handles.snapshot_infrared.
+
+Error in UIDemoMode/demomode_Callback
+(line 59)
+                live_infrared_Callback(handles.snapshot_infrared,
+                [], handles);
+
+Error in
+appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+SerialPort read: "BAT:799"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "BAT:799"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in
+matlab.graphics.controls.internal.PointerMixin/getInvisibleAxes
+
+Error in
+matlab.graphics.controls.internal.PointerMixin/hasDisabledInteractions
+
+Error in matlab.graphics.controls.internal.PointerMixin/updatePointer
+
+Error in
+matlab.graphics.controls.WebToolbarController/handleMouseMotion
+
+Error in
+matlab.graphics.controls.ToolbarController>@(e,d)obj.handleMouseMotion(e,d) 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in
+matlab.graphics.controls.internal.PointerMixin/getInvisibleAxes
+
+Error in
+matlab.graphics.controls.internal.PointerMixin/hasDisabledInteractions
+
+Error in matlab.graphics.controls.internal.PointerMixin/updatePointer
+
+Error in
+matlab.graphics.controls.WebToolbarController/handleMouseMotion
+
+Error in
+matlab.graphics.controls.ToolbarController>@(e,d)obj.handleMouseMotion(e,d) 
+> In instrcb (line 54)
+  In matlab.graphics.controls.internal/PointerMixin/getInvisibleAxes
+  In matlab.graphics.controls.internal/PointerMixin/hasDisabledInteractions
+  In matlab.graphics.controls.internal/PointerMixin/updatePointer
+  In matlab.graphics.controls/WebToolbarController/handleMouseMotion
+  In matlab.graphics.controls.ToolbarController>@(e,d)obj.handleMouseMotion(e,d) 
+Undefined function 'enable_infrared' for input arguments of type
+'UIInfraRed'.
+
+Error in UIInfraRed/snapshot_infrared_Callback (line 122)
+        enable_infrared(app, 'off');
+ 
+Error using matlab.ui.control.internal.controller.ComponentController/executeUserCallback (line 382)
+Error while evaluating Button PrivateButtonPushedFcn.
+
+Set train speed to 7 and direction to 0.
+SerialPort write: "&D;0;7;"
+SerialPort read: "&D;0;7;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed7"
+SerialPort read: "PreLap Sensor 1"
+Warning: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter,
+                obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 173)
+                            obj.call_callback('prelap1', false);
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: ""
+SerialPort read: "Lap Sensor 1"
+Warning: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter,
+                obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 176)
+                            obj.call_callback('lap1', false);
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in
+matlab.ui.internal.controller.FigureController/handleClientEvent
+(line 334)
+                    this.Model.processButtonEventFromClient(eventStructure.data.type,
+                    ...
+
+Error in matlab.ui.internal.controller.FigureController/handleEvent
+(line 309)
+                this.handleClientEvent(src, eventStructure);
+
+Error in
+matlab.ui.internal.controller.WebCanvasContainerController>@(varargin)this.handleEvent(varargin{:})
+(line 53)
+            this.EventHandlingService.attachEventListener(
+            @this.handleEvent );
+
+Error in hgfeval (line 62)
+        feval(fcn{1},varargin{:},fcn{2:end});
+
+Error in javaaddlistener>cbBridge (line 52)
+    hgfeval(response, java(o), e.JavaEvent)
+
+Error in javaaddlistener>@(o,e)cbBridge(o,e,response) (line 47)
+                          @(o,e) cbBridge(o,e,response)); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " 
+> In instrcb (line 54)
+  In matlab.ui.internal.controller/FigureController/handleClientEvent (line 334)
+  In matlab.ui.internal.controller/FigureController/handleEvent (line 309)
+  In matlab.ui.internal.controller.WebCanvasContainerController>@(varargin)this.handleEvent(varargin{:}) (line 53)
+  In hgfeval (line 62)
+  In javaaddlistener>cbBridge (line 52)
+  In javaaddlistener>@(o,e)cbBridge(o,e,response) (line 47) 
+SerialPort read: ""
+Set train speed to 7 and direction to 0.
+SerialPort write: "&D;0;7;"
+Set train speed to 0 and direction to 0.
+SerialPort write: "&D;0;0;"
+SerialPort read: "&D;0;7;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed7"
+SerialPort read: "&D;0;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed0"
+demomode value is 0
+Set DemoMode state to 0.
+SerialPort write: "&d:0;"
+SerialPort read: "&d:0;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 0"
+Warning: DemoMode exception: Unrecognized method, property, or field
+'snapshot_infrared' for class 'UIDemoMode'.
+
+Error in UIDemoMode/demomode_Callback (line 48)
+                stop_infrared_Callback(app.snapshot_infrared, app);
+
+Error in
+appdesigner.internal.service.AppManagementService/tryCallback (line
+344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+SerialPort read: "BAT:797"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+Set train speed to 9 and direction to 0.
+SerialPort write: "&D;0;9;"
+SerialPort read: "&D;0;9;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+Set DemoMode state to 1.
+SerialPort write: "&d:1;"
+SerialPort read: "&d:1;\r"
+SerialPort read: "D"
+SerialPort read: "moMode 1"
+demomode value is 1
+Warning: DemoMode exception: Unable to resolve the name
+handles.snapshot_infrared.
+
+Error in UIDemoMode/demomode_Callback (line 59)
+                live_infrared_Callback(handles.snapshot_infrared, [],
+                handles);
+
+Error in
+appdesigner.internal.service.AppManagementService/tryCallback (line
+344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+SerialPort read: "BAT:795"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "PreLap Sensor 0"
+SerialPort read: "...Slow"
+Warning: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter,
+                obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 179)
+                            obj.call_callback('prelap0', false);
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: "Lap Sensor 0"
+SerialPort read: "...Stop"
+Warning: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter,
+                obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 183)
+                            obj.call_callback('lap0', false);
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: "Wait:10000"
+SerialPort read: "BAT:795"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+SerialPort read: "BAT:796"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "PreLap Sensor 1"
+Warning: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter,
+                obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 173)
+                            obj.call_callback('prelap1', false);
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: ""
+SerialPort read: "BAT:794"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "Lap Sensor 1"
+Warning: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter,
+                obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 176)
+                            obj.call_callback('lap1', false);
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: ""
+SerialPort read: "BAT:794"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "BAT:793"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "PreLap Sensor 0"
+SerialPort read: "...Slow"
+Warning: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter,
+                obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 179)
+                            obj.call_callback('prelap0', false);
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: "Lap Sensor 0"
+SerialPort read: "...Stop"
+Warning: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter,
+                obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 183)
+                            obj.call_callback('lap0', false);
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: "Wait:10000"
+Set Halogen state to 1.
+SerialPort write: "&H:1;"
+SerialPort read: "&H:1;\r"
+SerialPort read: ""
+SerialPort read: "Set Halo 1"
+Warning: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 213)
+                obj.callback_receive{1}(type, parameter,
+                obj.callback_receive{2:end});
+
+Error in class_serial_port/loop (line 187)
+                            obj.call_callback('halo', false);
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in class_serial_port/send (line 106)
+                pause(0.05);
+
+Error in class_serial_port/setHalogen (line 131)
+            success = obj.send(sprintf('&H:%d;', state));
+
+Error in UIHalogenLamp/ButtonGroupSelectionChanged (line 38)
+                app.serial_handler.setHalogen(val);
+
+Error in
+appdesigner.internal.service.AppManagementService/tryCallback (line
+344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 258)
+Unknown SerialPort Callback " 
+Set Halogen state to 0.
+SerialPort write: "&H:0;"
+SerialPort read: "&H:0;\r"
+SerialPort read: ""
+SerialPort read: "Set Halo OFF"
+SerialPort read: "BAT:795"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+Set train speed to 0 and direction to 0.
+SerialPort write: "&D;0;0;"
+SerialPort read: "&D;0;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed0"
+demomode value is 0
+Set DemoMode state to 0.
+SerialPort write: "&d:0;"
+SerialPort read: "&d:0;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 0"
+Warning: DemoMode exception: Unrecognized method, property, or field
+'snapshot_infrared' for class 'UIDemoMode'.
+
+Error in UIDemoMode/demomode_Callback (line 48)
+                stop_infrared_Callback(app.snapshot_infrared, app);
+
+Error in
+appdesigner.internal.service.AppManagementService/tryCallback (line
+344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+SerialPort read: "BAT:796"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+SerialPort read: "BAT:797"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+Set train speed to 2 and direction to 0.
+SerialPort write: "&D;0;2;"
+SerialPort read: "&D;0;2;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed2"
+Set train speed to 3 and direction to 0.
+SerialPort write: "&D;0;3;"
+SerialPort read: "&D;0;3;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed3"
+Set train speed to 10 and direction to 0.
+SerialPort write: "&D;0;10;"
+SerialPort read: "&D;0;10;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed10"
+Set train speed to 9 and direction to 0.
+SerialPort write: "&D;0;9;"
+SerialPort read: "&D;0;9;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+SerialPort read: "BAT:795"
+Warning: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using fprintf
+Invalid file identifier.  Use fopen to generate a valid file
+identifier.
+
+Error in class_serial_port/loop (line 197)
+                            fprintf(obj.battery_log, '%s %s\r\n',
+                            datestr(now,'yymmdd_HHMMSS'),
+                            line(5:end));
+
+Error in class_serial_port>@(varargin)obj.loop(varargin{:}) (line 58)
+                obj.handle.BytesAvailableFcn = @obj.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+> In instrcb (line 54) 
+Set train speed to 0 and direction to 0.
+SerialPort write: "&D;0;0;"
+SerialPort read: "&D;0;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed0"
+>> 

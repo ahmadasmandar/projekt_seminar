@@ -1,0 +1,152 @@
+constructor created
+
+ans =
+
+           1           1        1920        1080
+
+
+ans = 
+
+  UILegoCity with properties:
+
+           UI: [1×1 Figure]
+    Container: [1×1 GridLayout]
+
+>> gui
+Connected to COM-Port COM2.
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both have GigE Vision
+cameras, we recommend putting them on separate subnets. 
+> In imaq.supportpackages.gige.internal.gigecamlist
+  In gigecamlist (line 31)
+  In gui>camera_init_Callback (line 139)
+  In gui_mainfcn (line 95)
+  In gui (line 42)
+  In matlab.graphics.internal.figfile.FigFile/read>@(hObject,eventdata)gui('camera_init_Callback',hObject,eventdata,guidata(hObject)) 
+Found videoinput camera QR-Code webcam at ID 2.
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE} are on the same subnet.  If both have GigE Vision
+cameras, we recommend putting them on separate subnets. 
+SerialPort read: "BAT:803"
+Found videoinput camera laser camera at ID 3.
+Warning: The ROIPosition property was modified by the camera. 
+Warning: The ROIPosition property was modified by the camera. 
+Connected to laser camera
+Found videoinput camera infrared camera at ID 1.
+Found gigecam camera multispectral camera at IP 192.168.1.1.
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both have GigE Vision
+cameras, we recommend putting them on separate subnets. 
+> In imaq.supportpackages.gige.internal.gigecamlist
+  In gigecamlist (line 31)
+  In gigecam (line 90)
+  In class_gigecam/connect (line 62)
+  In class_gigecam/config (line 85)
+  In parameter>camera_multispectral (line 100)
+  In gui>camera_init_Callback (line 178)
+  In gui_mainfcn (line 95)
+  In gui (line 42)
+  In matlab.graphics.internal.figfile.FigFile/read>@(hObject,eventdata)gui('camera_init_Callback',hObject,eventdata,guidata(hObject)) 
+Connected to multispectral camera
+Set train speed to 9 and direction to 0.
+SerialPort write: "&D;0;9;"
+SerialPort read: "&D;0;9;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+Set DemoMode state to 1.
+SerialPort write: "&d:1;"
+SerialPort read: "&d:1;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 1"
+Connected to infrared camera
+SerialPort read: "PreLap Sensor 0"
+SerialPort read: "...Slow"
+SerialPort read: "BAT:801"
+SerialPort read: "Lap Sensor 0"
+SerialPort read: "...Stop"
+Multispectral start
+Multispectral end
+Webcam start
+Connected to QR-Code webcam
+Webcam end
+Warning: IM2JAVA2D will be removed in a future release. 
+SerialPort read: "Wait:10000"
+Warning: Invalid callback: IM2JAVA2D will be removed in a future release. 
+> In instrcb (line 54) 
+SerialPort read: "BAT:802"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+SerialPort read: "BAT:798"
+SerialPort read: "PreLap Sensor 1"
+SerialPort read: ""
+SerialPort read: "Lap Sensor 1"
+SerialPort read: ""
+SerialPort read: "BAT:798"
+SerialPort read: "BAT:798"
+SerialPort read: "PreLap Sensor 0"
+SerialPort read: "...Slow"
+SerialPort read: "Lap Sensor 0"
+SerialPort read: "...Stop"
+Multispectral start
+Multispectral end
+Webcam start
+Webcam end
+Warning: IM2JAVA2D will be removed in a future release. 
+SerialPort read: "Wait:10000"
+SerialPort read: "BAT:798"
+Warning: Invalid callback: IM2JAVA2D will be removed in a future release. 
+> In instrcb (line 54) 
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+SerialPort read: "BAT:801"
+Set train speed to 0 and direction to 0.
+SerialPort write: "&D;0;0;"
+SerialPort read: "&D;0;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed0"
+Set DemoMode state to 0.
+SerialPort write: "&d:0;"
+SerialPort read: "&d:0;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 0"
+Infrared start
+SerialPort read: "BAT:801"
+Infrared end
+Set Halogen state to 1.
+SerialPort write: "&H:1;"
+SerialPort read: "&H:1;\r"
+SerialPort read: ""
+SerialPort read: "Set Halo 1"
+Set Halogen state to 0.
+SerialPort write: "&H:0;"
+SerialPort read: "&H:0;\r"
+SerialPort read: ""
+SerialPort read: "Set Halo OFF"
+SerialPort read: "BAT:802"
+SerialPort read: "BAT:802"
+Set DemoMode state to 0.
+SerialPort write: "&d:0;"
+SerialPort read: "&d:0;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 0"
+Set LED state to 0.
+SerialPort write: "&L:0;"
+SerialPort read: "&L:0;\r"
+SerialPort read: ""
+SerialPort read: "Set LED OFF"
+Set Halogen state to 0.
+SerialPort write: "&H:0;"
+SerialPort read: "&H:0;\r"
+SerialPort read: ""
+SerialPort read: "Set Halo OFF"
+Set train speed to 0 and direction to 1.
+SerialPort write: "&D;1;0;"
+SerialPort read: "&D;1;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 1	Speed0"
+Closed connection to COM-Port COM2.
+Closed connection to QR-Code webcam
+Closed connection to laser camera
+Closed connection to infrared camera
+Closed connection to multispectral camera
+>> 

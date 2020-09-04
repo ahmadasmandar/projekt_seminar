@@ -1,0 +1,92 @@
+
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both
+have GigE Vision cameras, we recommend putting them on separate subnets. 
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY
+to see the visible public details of an object. See 'help struct' for
+more information. 
+Found videoinput camera QR-Code webcam at ID 2.
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY
+to see the visible public details of an object. See 'help struct' for
+more information. 
+is webcame
+success to activate the cameras
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY
+to see the visible public details of an object. See 'help struct' for
+more information. 
+Warning: Exception in camera_laser(): Error using class_gigecam
+Error: File: class_gigecam.m Line: 173 Column: 9
+'stoppreview' is already defined as a method in the 'class_gigecam'
+class.
+
+Error in parameter>camera_laser (line 80)
+    camera = class_gigecam(name, 'gige', format, 'grayscale', model);
+
+Error in UIInitialize/camera_init_Callback (line 298)
+                    app.laser = app.param.camera_laser();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Warning: Calling STRUCT on an object prevents the object from hiding
+its implementation details and should thus be avoided. Use DISP or
+DISPLAY to see the visible public details of an object. See 'help
+struct' for more information. 
+Warning: Exception in camera_infrared(): Error using class_gigecam
+Error: File: class_gigecam.m Line: 173 Column: 9
+'stoppreview' is already defined as a method in the 'class_gigecam'
+class.
+
+Error in parameter>camera_infrared (line 63)
+    camera = class_gigecam(name, 'gige', format, 'grayscale', model);
+
+Error in UIInitialize/camera_init_Callback (line 308)
+                    app.infrared = app.param.camera_infrared();
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Warning: Calling STRUCT on an object prevents the object from hiding
+its implementation details and should thus be avoided. Use DISP or
+DISPLAY to see the visible public details of an object. See 'help
+struct' for more information. 
+Warning: Exception in camera_multispectral(): Error using
+class_gigecam
+Error: File: class_gigecam.m Line: 173 Column: 9
+'stoppreview' is already defined as a method in the 'class_gigecam'
+class.
+
+Error in parameter>camera_multispectral (line 102)
+    camera = class_gigecam(name, format, model, manufacturer, list);
+
+Error in UIInitialize/camera_init_Callback (line 318)
+                    app.multispectral =
+                    app.param.camera_multispectral(app.gigelist);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 

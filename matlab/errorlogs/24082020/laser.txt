@@ -1,0 +1,112 @@
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY to see
+the visible public details of an object. See 'help struct' for more
+information. 
+is a app
+axes
+  UIAxes with properties:
+
+             XLim: [0 600]
+             YLim: [0 500]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [58 108 448 351]
+
+  Show all properties
+
+size
+     0     0   220   450
+
+hImage  else
+app data was set
+Warning: The videoinput object is not configured for hardware trigger,
+therefore TriggerMode is being set to 'Off'. 
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY to see
+the visible public details of an object. See 'help struct' for more
+information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY to see
+the visible public details of an object. See 'help struct' for more
+information. 
+we rae in config 
+line 95 
+config function if 
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY to see
+the visible public details of an object. See 'help struct' for more
+information. 
+we rae in config 
+line 95 
+config function if 
+Exception 
+Warning: Exception while config laser camera: Error using
+imaqdevice/subsasgn (line 33)
+Property value must be a scalar integer greater than 0.
+
+Error in UILaser/get_images (line 437)
+        handle.FramesPerTrigger = count;
+
+Error in UILaser>@(varargin)app.get_images(varargin{:}) (line 238)
+        [success, images] = app.init_app.laser.config(@app.get_images);
+
+Error in class_videoinput/config (line 99)
+                    [obj.handle, varargout{1:nargout - 1}] =
+                    config_function(obj.handle);
+
+Error in UILaser/capture_stop_Callback (line 238)
+        [success, images] = app.init_app.laser.config(@app.get_images);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line
+344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY to
+see the visible public details of an object. See 'help struct' for more
+information. 
+SerialPort read: "BAT:779"
+type from serial init
+bat
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY to
+see the visible public details of an object. See 'help struct' for more
+information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY to
+see the visible public details of an object. See 'help struct' for more
+information. 
+SerialPort read: "BAT:779"
+type from serial init
+bat
+SerialPort read: "BAT:779"
+type from serial init
+bat
+SerialPort read: "BAT:779"
+type from serial init
+bat
+SerialPort read: "BAT:779"
+type from serial init
+bat
+SerialPort read: "BAT:779"
+type from serial init
+bat
+SerialPort read: "BAT:779"
+type from serial init
+bat
+SerialPort read: "BAT:779"
+type from serial init
+bat
+SerialPort read: "BAT:779"
+type from serial init
+bat
+SerialPort read: "BAT:779"
+type from serial init
+bat

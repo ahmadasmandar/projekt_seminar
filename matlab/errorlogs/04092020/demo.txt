@@ -1,0 +1,522 @@
+constructor created
+
+ans =
+
+           1           1        1920        1080
+
+
+ans = 
+
+  UILegoCity with properties:
+
+           UI: [1×1 Figure]
+    Container: [1×1 GridLayout]
+
+Connected to COM-Port COM2.
+serial object received successfully
+train_serial object received successfully
+halogen_serial object received successfully
+demoButton_serial object received successfully
+demo flag received and the value is 
+   0
+
+SerialPort read: "BAT:804"
+type from serial init
+bat
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both have GigE Vision
+cameras, we recommend putting them on separate subnets. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Found videoinput camera QR-Code webcam at ID 2.
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+is webcame
+success to activate the cameras
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE} are on the same subnet.  If both have GigE Vision
+cameras, we recommend putting them on separate subnets. 
+SerialPort read: "BAT:804"
+type from serial init
+bat
+Found videoinput camera laser camera at ID 3.
+we rae in config 
+Warning: The ROIPosition property was modified by the camera. 
+Warning: The ROIPosition property was modified by the camera. 
+Connected to laser camera
+line 95 
+config function if 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Found gigecam camera infrared camera at IP 169.254.10.153.
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Found gigecam camera multispectral camera at IP 192.168.1.1.
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both have GigE Vision
+cameras, we recommend putting them on separate subnets. 
+SerialPort read: "BAT:804"
+type from serial init
+bat
+Connected to multispectral camera
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Set train speed to 9 and direction to 0.
+SerialPort write: "&D;0;9;"
+SerialPort read: "&D;0;9;\r"
+SerialPort read: "
+D
+rive	Dir 0	Speed9"
+Set DemoMode state to 1.
+SerialPort write: "&d:1;"
+demomode value is 1
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Both {70E64838-09CF-451D-A1A5-E93D287EA33F} and
+{F71296B1-54E4-4C34-9C9D-C13823B664DE}  are on the same subnet. If both have GigE Vision
+cameras, we recommend putting them on separate subnets. 
+SerialPort read: "&d:1;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 1"
+SerialPort read: "PreLap Sensor 1"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 242)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 173)
+                            app.call_callback('prelap1', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in imaq.supportpackages.gige.internal.gigecamlist
+
+Error in gigecamlist (line 31)
+cams = imaq.supportpackages.gige.internal.gigecamlist;
+
+Error in gigecam (line 90)
+            cams = gigecamlist();
+
+Error in class_gigecam/connect (line 62)
+                obj.handle = gigecam(obj.ip, 'PixelFormat', obj.format);
+
+Error in class_gigecam/preview (line 110)
+            if obj.connect() == false
+
+Error in UIInfraRed/live_infrared_Callback (line 123)
+        if ~app.init_app.infrared.preview(@app.preview_infrared_adjust,
+        app.camview_infrared)
+
+Error in UIDemoMode/demomode_Callback (line 59)
+                live_infrared_Callback(app.infrared_obj);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback
+(line 242)
+Unknown SerialPort Callback " 
+SerialPort read: ""
+SerialPort read: "Lap Sensor 1"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 242)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 176)
+                            app.call_callback('lap1', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in asyncio.Channel (line 136)
+    customProps = obj.ChannelImpl.init(options);
+
+Error in imaq.supportpackages.gige.internal.GigeCamController
+
+Error in gigecam/createGigeCamControllers (line 777)
+                    imaq.supportpackages.gige.internal.GigeCamController(obj.SerialNumber,obj.IPAddress,
+                    format);
+
+Error in gigecam (line 140)
+                obj.createGigeCamControllers('default');
+
+Error in class_gigecam/connect (line 62)
+                obj.handle = gigecam(obj.ip, 'PixelFormat', obj.format);
+
+Error in class_gigecam/preview (line 110)
+            if obj.connect() == false
+
+Error in UIInfraRed/live_infrared_Callback (line 123)
+        if ~app.init_app.infrared.preview(@app.preview_infrared_adjust,
+        app.camview_infrared)
+
+Error in UIDemoMode/demomode_Callback (line 59)
+                live_infrared_Callback(app.infrared_obj);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback (line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback
+(line 242)
+Unknown SerialPort Callback " 
+SerialPort read: ""
+SerialPort read: "BAT:802"
+type from serial init
+bat
+Connected to infrared camera
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+SerialPort read: "BAT:801"
+type from serial init
+bat
+SerialPort read: "PreLap Sensor 0"
+SerialPort read: "...Slow"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 242)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 179)
+                            app.call_callback('prelap0', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback
+(line 242)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: "Lap Sensor 0"
+SerialPort read: "...Stop"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 242)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 183)
+                            app.call_callback('lap0', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback
+(line 242)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: "Wait:10000"
+SerialPort read: "BAT:799"
+type from serial init
+bat
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+SerialPort read: "BAT:803"
+type from serial init
+bat
+SerialPort read: "BAT:799"
+type from serial init
+bat
+SerialPort read: "PreLap Sensor 1"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 242)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 173)
+                            app.call_callback('prelap1', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in verifyFormat (line 32)
+                matlab.internal.datetime.formatAsString(0,fmt,tz,false);
+
+Error in datetime/subsasgnDot (line 25)
+        this.fmt = verifyFormat(rhs,this.tz,false,true);
+
+Error in datetime/subsasgn (line 23)
+        this = move(this).subsasgnDot(s,rhs);
+
+Error in imaq.supportpackages.gige.internal.GigeCamController/transferFrameFromStream
+
+Error in imaq.supportpackages.gige.internal.GigeCamController/onAsyncioInputStreamWritten
+
+Error in
+imaq.supportpackages.gige.internal.GigeCamController>@(varargin)obj.onAsyncioInputStreamWritten(varargin{:})
+
+Error in asyncio.Channel/onDataReceived (line 487)
+                notify(obj.InputStream, 'DataWritten', ...
+
+Error in asyncio.Channel>@(source,data)obj.onDataReceived() (line 425)
+                                         @(source, data) obj.onDataReceived()); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback
+(line 242)
+Unknown SerialPort Callback " 
+> In instrcb (line 54)
+  In verifyFormat (line 32)
+  In datetime/subsasgnDot (line 25)
+  In datetime/subsasgn (line 23)
+  In imaq.supportpackages.gige.internal/GigeCamController/transferFrameFromStream
+  In imaq.supportpackages.gige.internal/GigeCamController/onAsyncioInputStreamWritten
+  In imaq.supportpackages.gige.internal.GigeCamController>@(varargin)obj.onAsyncioInputStreamWritten(varargin{:})
+  In asyncio/Channel/onDataReceived (line 487)
+  In asyncio.Channel>@(source,data)obj.onDataReceived() (line 425) 
+SerialPort read: ""
+SerialPort read: "Lap Sensor 1"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 242)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 176)
+                            app.call_callback('lap1', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback
+(line 242)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: ""
+SerialPort read: "BAT:799"
+type from serial init
+bat
+SerialPort read: "BAT:799"
+type from serial init
+bat
+SerialPort read: "PreLap Sensor 0"
+SerialPort read: "...Slow"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 242)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 179)
+                            app.call_callback('prelap0', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback
+(line 242)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: "Lap Sensor 0"
+SerialPort read: "...Stop"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback (line 242)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 183)
+                            app.call_callback('lap0', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in UIInfraRed/preview_infrared_adjust (line 210)
+        img = imrotate(img, 90);
+
+Error in UIInfraRed>@(varargin)app.preview_infrared_adjust(varargin{:}) (line 123)
+        if ~app.init_app.infrared.preview(@app.preview_infrared_adjust,
+        app.camview_infrared)
+
+Error in imaq.supportpackages.gige.internal.PreviewController/updatePreview
+
+Error in
+imaq.supportpackages.gige.internal.PreviewController>@(src,event)obj.updatePreview
+
+Error in internal.IntervalTimer/onCustomEvent (line 154)
+        notify(obj, 'Executing', internal.TimerInfo(eventData.ExecutionCount));
+
+Error in internal.IntervalTimer>@(source,data)obj.onCustomEvent(data.Type,data.Data) (line
+115)
+                                                 @(source,data)
+                                                 obj.onCustomEvent(data.Type,data.Data));
+
+Error in asyncio.Channel/onCustomEvent (line 477)
+            notify(obj, 'Custom', asyncio.CustomEventInfo(type,data));
+
+Error in asyncio.Channel>@(source,data)obj.onCustomEvent(data.Type,data.Data) (line 409)
+                                     @(source, data) obj.onCustomEvent(data.Type,
+                                     data.Data)); 
+Warning: Invalid callback: SerialPort read error: Error using UIInitialize/serial_callback
+(line 242)
+Unknown SerialPort Callback " 
+> In instrcb (line 54)
+  In UIInfraRed/preview_infrared_adjust (line 210)
+  In UIInfraRed>@(varargin)app.preview_infrared_adjust(varargin{:}) (line 123)
+  In imaq.supportpackages.gige.internal/PreviewController/updatePreview
+  In imaq.supportpackages.gige.internal.PreviewController>@(src,event)obj.updatePreview
+  In internal/IntervalTimer/onCustomEvent (line 154)
+  In internal.IntervalTimer>@(source,data)obj.onCustomEvent(data.Type,data.Data) (line 115)
+  In asyncio/Channel/onCustomEvent (line 477)
+  In asyncio.Channel>@(source,data)obj.onCustomEvent(data.Type,data.Data) (line 409) 
+SerialPort read: "Wait:10000"
+Set train speed to 0 and direction to 0.
+SerialPort write: "&D;0;0;"
+demomode value is 0
+Set DemoMode state to 0.
+SerialPort write: "&d:0;"
+SerialPort read: "&D;0;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed0"
+SerialPort read: "&d:0;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 0"
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+is not a app
+axes
+  UIAxes with properties:
+
+             XLim: [0 350]
+             YLim: [0 350]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [84 92 471 345]
+
+  Show all properties
+
+SerialPort read: "BAT:801"
+type from serial init
+bat
+Connected to QR-Code webcam
+     0     0   640   480
+
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+Warning: IM2JAVA2D will be removed in a future release. 
+Warning: Calling STRUCT on an object prevents the object from hiding its implementation
+details and should thus be avoided. Use DISP or DISPLAY to see the visible public details
+of an object. See 'help struct' for more information. 
+SerialPort read: "BAT:803"
+type from serial init
+bat
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed0"
+SerialPort read: "BAT:803"
+type from serial init
+bat
+SerialPort read: "BAT:803"
+type from serial init
+bat
+>> 

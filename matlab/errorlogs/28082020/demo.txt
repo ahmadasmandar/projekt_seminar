@@ -1,0 +1,421 @@
+
+
+             XLim: [0 300]
+             YLim: [0 250]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [11 11 541 423]
+
+  Show all properties
+
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback
+(line 244)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 187)
+                            app.call_callback('halo', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end});
+
+Error in
+imaq.supportpackages.gige.internal.PreviewController/updatePreview
+
+Error in
+imaq.supportpackages.gige.internal.PreviewController>@(src,event)obj.updatePreview
+
+Error in internal.IntervalTimer/onCustomEvent (line 154)
+        notify(obj, 'Executing',
+        internal.TimerInfo(eventData.ExecutionCount));
+
+Error in
+internal.IntervalTimer>@(source,data)obj.onCustomEvent(data.Type,data.Data)
+(line 115)
+                                                 @(source,data)
+                                                 obj.onCustomEvent(data.Type,data.Data));
+
+Error in asyncio.Channel/onCustomEvent (line 477)
+            notify(obj, 'Custom', asyncio.CustomEventInfo(type,data));
+
+Error in
+asyncio.Channel>@(source,data)obj.onCustomEvent(data.Type,data.Data)
+(line 409)
+                                     @(source, data)
+                                     obj.onCustomEvent(data.Type,
+                                     data.Data));
+
+Error in class_serial_port/send (line 106)
+                pause(0.05);
+
+Error in class_serial_port/setHalogen (line 131)
+            success = app.send(sprintf('&H:%d;', state));
+
+Error in UIHalogenLamp/ButtonGroupSelectionChanged (line 38)
+                app.serial_handler.setHalogen(val);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 244)
+Unknown SerialPort Callback " 
+SerialPort read: "BAT:773"
+type from serial init
+bat
+SerialPort read: "BAT:773"
+type from serial init
+bat
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY
+to see the visible public details of an object. See 'help struct' for
+more information. 
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY
+to see the visible public details of an object. See 'help struct' for
+more information. 
+Set Halogen state to 0.
+SerialPort write: "&H:0;"
+SerialPort read: "&H:0;\r"
+SerialPort read: ""
+SerialPort read: "Set Halo OFF"
+SerialPort read: "BAT:772"
+type from serial init
+bat
+SerialPort read: "BAT:772"
+type from serial init
+bat
+SerialPort read: "BAT:772"
+type from serial init
+bat
+SerialPort read: "BAT:772"
+type from serial init
+bat
+SerialPort read: "BAT:772"
+type from serial init
+bat
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY
+to see the visible public details of an object. See 'help struct' for
+more information. 
+is a app
+axes
+  UIAxes with properties:
+
+             XLim: [0 600]
+             YLim: [0 500]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [58 104 448 335]
+
+  Show all properties
+
+size
+     0     0   220   450
+
+hImage  else
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY
+to see the visible public details of an object. See 'help struct' for
+more information. 
+SerialPort read: "BAT:772"
+type from serial init
+bat
+SerialPort read: "BAT:772"
+type from serial init
+bat
+Set train speed to 1 and direction to 0.
+SerialPort write: "&D;0;1;"
+SerialPort read: "&D;0;1;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed1"
+Set train speed to 0 and direction to 0.
+SerialPort write: "&D;0;0;"
+SerialPort read: "&D;0;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed0"
+SerialPort read: "BAT:772"
+type from serial init
+bat
+SerialPort read: "BAT:772"
+type from serial init
+bat
+Set train speed to 9 and direction to 0.
+SerialPort write: "&D;0;9;"
+SerialPort read: "&D;0;9;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+Set DemoMode state to 1.
+SerialPort write: "&d:1;"
+demomode value is 1
+Warning: DemoMode exception: Unable to resolve the name
+handles.snapshot_infrared.
+
+Error in UIDemoMode/demomode_Callback (line 59)
+                live_infrared_Callback(handles.snapshot_infrared, [],
+                handles);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+SerialPort read: "&d:1;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 1"
+gige: Block/frame 6561 is being dropped because a lost packet is unable
+to be resent. There are several possible causes for packets being lost.
+See the troubleshooting information in the "Configuring GigE Vision
+Devices" section of the Image Acquisition Toolbox documentation.
+
+Error in UIDemoMode/demomode_Callback (line 69)
+            waitfor(msgbox('Interner Fehler während der SerialPort
+            Kommunikation.', 'Fehler', 'warn'));
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ...
+ 
+Set train speed to 0 and direction to 0.
+SerialPort write: "&D;0;0;"
+SerialPort read: "&D;0;0;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed0"
+demomode value is 0
+Set DemoMode state to 0.
+SerialPort write: "&d:0;"
+SerialPort read: "&d:0;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 0"
+Warning: DemoMode exception: Unrecognized method, property, or field
+'snapshot_infrared' for class 'UIDemoMode'.
+
+Error in UIDemoMode/demomode_Callback (line 48)
+                stop_infrared_Callback(app.snapshot_infrared, app);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+SerialPort read: "BAT:769"
+type from serial init
+bat
+Set train speed to 9 and direction to 0.
+SerialPort write: "&D;0;9;"
+SerialPort read: "&D;0;9;\r"
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+Set DemoMode state to 1.
+SerialPort write: "&d:1;"
+SerialPort read: "&d:1;\r"
+SerialPort read: "
+D
+emoMode 1"
+demomode value is 1
+Warning: DemoMode exception: Unable to resolve the name
+handles.snapshot_infrared.
+
+Error in UIDemoMode/demomode_Callback (line 59)
+                live_infrared_Callback(handles.snapshot_infrared, [],
+                handles);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+SerialPort read: "BAT:772"
+type from serial init
+bat
+SerialPort read: "BAT:768"
+type from serial init
+bat
+SerialPort read: "PreLap Sensor 0"
+SerialPort read: "...Slow"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback
+(line 244)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 179)
+                            app.call_callback('prelap0', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 244)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: "Lap Sensor 0"
+SerialPort read: "...Stop"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback
+(line 244)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 183)
+                            app.call_callback('lap0', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 244)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: "Wait:10000"
+SerialPort read: "BAT:769"
+type from serial init
+bat
+SerialPort read: ""
+SerialPort read: "Drive	Dir 0	Speed9"
+gige: Block/frame 11533 is being dropped because a lost packet is unable
+to be resent. There are several possible causes for packets being lost.
+See the troubleshooting information in the "Configuring GigE Vision
+Devices" section of the Image Acquisition Toolbox documentation.
+ 
+SerialPort read: "BAT:769"
+type from serial init
+bat
+SerialPort read: "PreLap Sensor 1"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback
+(line 244)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 173)
+                            app.call_callback('prelap1', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 244)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: ""
+SerialPort read: "Lap Sensor 1"
+type from serial init
+   0
+
+Warning: SerialPort read error: Error using UIInitialize/serial_callback
+(line 244)
+Unknown SerialPort Callback " ".
+
+Error in class_serial_port/call_callback (line 211)
+                serial_callback(app.init_app_callback, parameter,type);
+
+Error in class_serial_port/loop (line 176)
+                            app.call_callback('lap1', false);
+
+Error in class_serial_port>@(varargin)app.loop(varargin{:}) (line 58)
+                app.handle.BytesAvailableFcn = @app.loop;
+
+Error in instrcb (line 42)
+        feval(val{1}, obj, eventStruct, val{2:end}); 
+Warning: Invalid callback: SerialPort read error: Error using
+UIInitialize/serial_callback (line 244)
+Unknown SerialPort Callback " 
+> In instrcb (line 54) 
+SerialPort read: ""
+SerialPort read: "BAT:767"
+type from serial init
+bat
+SerialPort read: "BAT:767"
+type from serial init
+bat
+Set train speed to 0 and direction to 0.
+SerialPort write: "&D;0;0;"
+SerialPort read: "&D;0;0;\r"
+SerialPort read: "
+D
+rive	Dir 0	Speed0"
+demomode value is 0
+Set DemoMode state to 0.
+SerialPort write: "&d:0;"
+SerialPort read: "&d:0;\r"
+SerialPort read: ""
+SerialPort read: "DemoMode 0"
+Warning: DemoMode exception: Unrecognized method, property, or field
+'snapshot_infrared' for class 'UIDemoMode'.
+
+Error in UIDemoMode/demomode_Callback (line 48)
+                stop_infrared_Callback(app.snapshot_infrared, app);
+
+Error in appdesigner.internal.service.AppManagementService/tryCallback
+(line 344)
+                    callback(app, event);
+
+Error in
+matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)
+(line 35)
+            newCallback = @(source,
+            event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),
+            ... 
+SerialPort read: "BAT:768"
+type from serial init
+bat
+SerialPort read: "BAT:772"
+type from serial init
+bat
+>> 

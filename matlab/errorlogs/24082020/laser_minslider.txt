@@ -1,0 +1,9 @@
+Unrecognized property 'Min' for class
+'matlab.ui.control.Slider'.
+
+Error in UILaser/cut_begin_Callback (line
+337)
+        app.image_slider.Min = 1;
+ 
+Error using matlab.ui.control.internal.controller.ComponentController/executeUserCallback (line 382)
+Error while evaluating Button PrivateButtonPushedFcn.
